@@ -1,0 +1,1557 @@
+10-01-2020 @ 07:49:03 - Payment nonce is missing
+10-01-2020 @ 07:50:24 - Payment nonce is missing
+10-01-2020 @ 07:53:43 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 11
+    [exp_year] => 2023
+    [billing_postal_code] => 422013
+)
+
+10-01-2020 @ 07:53:49 - Request
+method:
+uri: createCustomerWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "given_name": "darshana",
+    "family_name": "bagul",
+    "company_name": "cc",
+    "email_address": "darshanabagul24@gmail.com",
+    "address": {
+        "address_line_1": "111",
+        "address_line_2": "mohini ghansham apt",
+        "locality": "nashik",
+        "administrative_district_level_1": "MH",
+        "postal_code": "422013",
+        "country": "IN",
+        "first_name": "darshana",
+        "last_name": "bagul",
+        "organization": "cc"
+    },
+    "phone_number": "9099999999"
+}
+duration: 1.66269s
+
+10-01-2020 @ 07:53:49 - Response
+code: 200
+message:
+headers: Array
+(
+    [0] => HTTP/2 200
+    [date] => Thu, 01 Oct 2020 07:58:02 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [vary] => Accept-Encoding, User-Agent
+    [content-length] => 528
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: {
+    "customer": {
+        "id": "RBG7P5HSV0R175J5BJ7FZWAVVW",
+        "created_at": "2020-10-01T07:58:02.946Z",
+        "updated_at": "2020-10-01T07:58:03Z",
+        "given_name": "darshana",
+        "family_name": "bagul",
+        "company_name": "cc",
+        "email_address": "darshanabagul24@gmail.com",
+        "address": {
+            "address_line_1": "111",
+            "address_line_2": "mohini ghansham apt",
+            "locality": "nashik",
+            "administrative_district_level_1": "MH",
+            "postal_code": "422013",
+            "country": "IN"
+        },
+        "phone_number": "9099999999",
+        "preferences": {
+            "email_unsubscribed": false
+        },
+        "creation_source": "THIRD_PARTY"
+    }
+}
+
+10-01-2020 @ 07:53:51 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "133",
+        "line_items": [
+            {
+                "name": "CBD INFUSED PAIN RELIEF SUPPORT",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 400,
+                    "currency": "AUD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:133_0"
+}
+duration: 1.14049s
+
+10-01-2020 @ 07:53:51 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 07:58:04 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 07:53:51 - [INVALID_VALUE] This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 07:53:52 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASEPXC5AjfaFpijvKg0ajEGLg",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:133_0",
+    "amount_money": {
+        "amount": 400,
+        "currency": "AUD"
+    },
+    "autocomplete": true,
+    "customer_id": "RBG7P5HSV0R175J5BJ7FZWAVVW",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "133",
+    "buyer_email_address": "darshanabagul24@gmail.com",
+    "billing_address": {
+        "address_line_1": "111",
+        "address_line_2": "mohini ghansham apt",
+        "locality": "nashik",
+        "administrative_district_level_1": "MH",
+        "postal_code": "422013",
+        "country": "IN",
+        "first_name": "darshana",
+        "last_name": "bagul",
+        "organization": "cc"
+    },
+    "note": "Madre Terra - Order 133"
+}
+duration: 1.03648s
+
+10-01-2020 @ 07:53:52 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 07:58:05 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 07:53:52 - Status code INVALID_VALUE: This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 07:54:34 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 11
+    [exp_year] => 2023
+    [billing_postal_code] => 422013
+)
+
+10-01-2020 @ 07:54:36 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "133",
+        "line_items": [
+            {
+                "name": "CBD INFUSED PAIN RELIEF SUPPORT",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 400,
+                    "currency": "AUD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:133_1"
+}
+duration: 1.43514s
+
+10-01-2020 @ 07:54:36 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 07:58:50 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 07:54:36 - [INVALID_VALUE] This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 07:54:38 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASEJPGp87mnjGl69CAfMMJ_kI",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:133_1",
+    "amount_money": {
+        "amount": 400,
+        "currency": "AUD"
+    },
+    "autocomplete": true,
+    "customer_id": "RBG7P5HSV0R175J5BJ7FZWAVVW",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "133",
+    "buyer_email_address": "darshanabagul24@gmail.com",
+    "billing_address": {
+        "address_line_1": "111",
+        "address_line_2": "mohini ghansham apt",
+        "locality": "nashik",
+        "administrative_district_level_1": "MH",
+        "postal_code": "422013",
+        "country": "IN",
+        "first_name": "darshana",
+        "last_name": "bagul",
+        "organization": "cc"
+    },
+    "note": "Madre Terra - Order 133"
+}
+duration: 1.23823s
+
+10-01-2020 @ 07:54:38 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 07:58:51 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 07:54:38 - Status code INVALID_VALUE: This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 08:10:03 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 2
+    [exp_year] => 2025
+    [billing_postal_code] => 422012
+)
+
+10-01-2020 @ 08:10:09 - Request
+method:
+uri: createCustomerWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "given_name": "pavan",
+    "family_name": "bagul",
+    "company_name": "pm auto",
+    "email_address": "pavanbagul31@gmail.com",
+    "address": {
+        "address_line_1": "jail road",
+        "address_line_2": "sur",
+        "locality": "nashik",
+        "administrative_district_level_1": "MH",
+        "postal_code": "422012",
+        "country": "IN",
+        "first_name": "pavan",
+        "last_name": "bagul",
+        "organization": "pm auto"
+    },
+    "phone_number": "9000000000"
+}
+duration: 1.8388s
+
+10-01-2020 @ 08:10:09 - Response
+code: 200
+message:
+headers: Array
+(
+    [0] => HTTP/2 200
+    [date] => Thu, 01 Oct 2020 08:14:23 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [vary] => Accept-Encoding, User-Agent
+    [content-length] => 517
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: {
+    "customer": {
+        "id": "D2PBDRW5M4SVS487YHQ7Z4AEJC",
+        "created_at": "2020-10-01T08:14:23.165Z",
+        "updated_at": "2020-10-01T08:14:23Z",
+        "given_name": "pavan",
+        "family_name": "bagul",
+        "company_name": "pm auto",
+        "email_address": "pavanbagul31@gmail.com",
+        "address": {
+            "address_line_1": "jail road",
+            "address_line_2": "sur",
+            "locality": "nashik",
+            "administrative_district_level_1": "MH",
+            "postal_code": "422012",
+            "country": "IN"
+        },
+        "phone_number": "9000000000",
+        "preferences": {
+            "email_unsubscribed": false
+        },
+        "creation_source": "THIRD_PARTY"
+    }
+}
+
+10-01-2020 @ 08:10:11 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "134",
+        "line_items": [
+            {
+                "name": "CBD ISOLATE",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 450,
+                    "currency": "AUD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:134_0"
+}
+duration: 1.20798s
+
+10-01-2020 @ 08:10:11 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 08:14:24 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 08:10:11 - [INVALID_VALUE] This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 08:10:12 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASED8VgYtTOT0xZcIt4f0hdt4",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:134_0",
+    "amount_money": {
+        "amount": 450,
+        "currency": "AUD"
+    },
+    "autocomplete": true,
+    "customer_id": "D2PBDRW5M4SVS487YHQ7Z4AEJC",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "134",
+    "buyer_email_address": "pavanbagul31@gmail.com",
+    "billing_address": {
+        "address_line_1": "jail road",
+        "address_line_2": "sur",
+        "locality": "nashik",
+        "administrative_district_level_1": "MH",
+        "postal_code": "422012",
+        "country": "IN",
+        "first_name": "pavan",
+        "last_name": "bagul",
+        "organization": "pm auto"
+    },
+    "note": "Madre Terra - Order 134"
+}
+duration: 1.61628s
+
+10-01-2020 @ 08:10:12 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 08:14:26 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 08:10:13 - Status code INVALID_VALUE: This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 08:10:55 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => MASTERCARD
+    [last_4] => 5100
+    [exp_month] => 2
+    [exp_year] => 2025
+    [billing_postal_code] => 422012
+)
+
+10-01-2020 @ 08:11:00 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "134",
+        "line_items": [
+            {
+                "name": "CBD ISOLATE",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 450,
+                    "currency": "AUD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:134_1"
+}
+duration: 1.83652s
+
+10-01-2020 @ 08:11:00 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 08:15:14 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 08:11:00 - [INVALID_VALUE] This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 08:11:01 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASEBtT4S9OT5yYLmEM3quXWY0",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:134_1",
+    "amount_money": {
+        "amount": 450,
+        "currency": "AUD"
+    },
+    "autocomplete": true,
+    "customer_id": "D2PBDRW5M4SVS487YHQ7Z4AEJC",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "134",
+    "buyer_email_address": "pavanbagul31@gmail.com",
+    "billing_address": {
+        "address_line_1": "jail road",
+        "address_line_2": "sur",
+        "locality": "nashik",
+        "administrative_district_level_1": "MH",
+        "postal_code": "422012",
+        "country": "IN",
+        "first_name": "pavan",
+        "last_name": "bagul",
+        "organization": "pm auto"
+    },
+    "note": "Madre Terra - Order 134"
+}
+duration: 1.08596s
+
+10-01-2020 @ 08:11:01 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 08:15:15 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 08:11:01 - Status code INVALID_VALUE: This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 08:43:49 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 4
+    [exp_year] => 2022
+    [billing_postal_code] => 2323
+)
+
+10-01-2020 @ 08:44:19 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 4
+    [exp_year] => 2022
+    [billing_postal_code] => 16031
+)
+
+10-01-2020 @ 08:44:35 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 4
+    [exp_year] => 2022
+    [billing_postal_code] => 16033
+)
+
+10-01-2020 @ 08:44:52 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 4
+    [exp_year] => 2022
+    [billing_postal_code] => 16033
+)
+
+10-01-2020 @ 08:45:03 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 4
+    [exp_year] => 2022
+    [billing_postal_code] => 16033
+)
+
+10-01-2020 @ 08:45:08 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "135",
+        "line_items": [
+            {
+                "name": "CBD INFUSED SLEEP SUPPORT",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 400,
+                    "currency": "AUD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:135_0"
+}
+duration: 1.96651s
+
+10-01-2020 @ 08:45:08 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 08:49:21 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 08:45:08 - [INVALID_VALUE] This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 08:45:10 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASEOYOuIEdxBSn_tChzliygrM",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:135_0",
+    "amount_money": {
+        "amount": 400,
+        "currency": "AUD"
+    },
+    "autocomplete": true,
+    "customer_id": "D2PBDRW5M4SVS487YHQ7Z4AEJC",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "135",
+    "buyer_email_address": "pavanbagul31@gmail.com",
+    "billing_address": {
+        "address_line_1": "ddd",
+        "address_line_2": "ddd",
+        "locality": "ddd",
+        "administrative_district_level_1": "AK",
+        "postal_code": "16033",
+        "country": "US",
+        "first_name": "sadas",
+        "last_name": "jjgjg",
+        "organization": "kgkgkg"
+    },
+    "note": "Madre Terra - Order 135"
+}
+duration: 1.50651s
+
+10-01-2020 @ 08:45:10 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 08:49:23 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 08:45:11 - Status code INVALID_VALUE: This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 09:50:01 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => VISA
+    [last_4] => 1111
+    [exp_month] => 4
+    [exp_year] => 2022
+    [billing_postal_code] => 16033
+)
+
+10-01-2020 @ 09:50:04 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "135",
+        "line_items": [
+            {
+                "name": "CBD INFUSED SLEEP SUPPORT",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 400,
+                    "currency": "AUD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:135_1"
+}
+duration: 1.56615s
+
+10-01-2020 @ 09:50:04 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 09:54:18 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 09:50:04 - [INVALID_VALUE] This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 09:50:05 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASEKa3oCe3TlHmp4oUJMTK8CY",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:135_1",
+    "amount_money": {
+        "amount": 400,
+        "currency": "AUD"
+    },
+    "autocomplete": true,
+    "customer_id": "D2PBDRW5M4SVS487YHQ7Z4AEJC",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "135",
+    "buyer_email_address": "pavanbagul31@gmail.com",
+    "billing_address": {
+        "address_line_1": "ddd",
+        "address_line_2": "ddd",
+        "locality": "ddd",
+        "administrative_district_level_1": "AK",
+        "postal_code": "16033",
+        "country": "US",
+        "first_name": "sadas",
+        "last_name": "jjgjg",
+        "organization": "kgkgkg"
+    },
+    "note": "Madre Terra - Order 135"
+}
+duration: 1.26402s
+
+10-01-2020 @ 09:50:05 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 09:54:19 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 09:50:06 - Status code INVALID_VALUE: This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 09:56:27 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => MASTERCARD
+    [last_4] => 1016
+    [exp_month] => 4
+    [exp_year] => 2022
+    [billing_postal_code] => 16033
+)
+
+10-01-2020 @ 09:56:30 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "135",
+        "line_items": [
+            {
+                "name": "CBD INFUSED SLEEP SUPPORT",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 400,
+                    "currency": "AUD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:135_2"
+}
+duration: 1.09442s
+
+10-01-2020 @ 09:56:30 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 10:00:44 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 09:56:30 - [INVALID_VALUE] This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 09:56:31 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASEIMU8iRMuimJpSCMeyL5IYY",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:135_2",
+    "amount_money": {
+        "amount": 400,
+        "currency": "AUD"
+    },
+    "autocomplete": true,
+    "customer_id": "D2PBDRW5M4SVS487YHQ7Z4AEJC",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "135",
+    "buyer_email_address": "pavanbagul31@gmail.com",
+    "billing_address": {
+        "address_line_1": "ddd",
+        "address_line_2": "ddd",
+        "locality": "ddd",
+        "administrative_district_level_1": "AK",
+        "postal_code": "16033",
+        "country": "US",
+        "first_name": "sadas",
+        "last_name": "jjgjg",
+        "organization": "kgkgkg"
+    },
+    "note": "Madre Terra - Order 135"
+}
+duration: 1.04433s
+
+10-01-2020 @ 09:56:31 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 10:00:45 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 09:56:31 - Status code INVALID_VALUE: This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 09:56:54 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => MASTERCARD
+    [last_4] => 1016
+    [exp_month] => 4
+    [exp_year] => 2022
+    [billing_postal_code] => 16033
+)
+
+10-01-2020 @ 09:56:57 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "135",
+        "line_items": [
+            {
+                "name": "CBD INFUSED SLEEP SUPPORT",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 400,
+                    "currency": "AUD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:135_3"
+}
+duration: 1.81655s
+
+10-01-2020 @ 09:56:57 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 10:01:11 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 09:56:57 - [INVALID_VALUE] This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 09:56:59 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASEKqs7JDaUG4Ov1nRFQhcKOU",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:135_3",
+    "amount_money": {
+        "amount": 400,
+        "currency": "AUD"
+    },
+    "autocomplete": true,
+    "customer_id": "D2PBDRW5M4SVS487YHQ7Z4AEJC",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "135",
+    "buyer_email_address": "pavanbagul31@gmail.com",
+    "billing_address": {
+        "address_line_1": "ddd",
+        "address_line_2": "ddd",
+        "locality": "ddd",
+        "administrative_district_level_1": "AK",
+        "postal_code": "16033",
+        "country": "US",
+        "first_name": "sadas",
+        "last_name": "jjgjg",
+        "organization": "kgkgkg"
+    },
+    "note": "Madre Terra - Order 135"
+}
+duration: 1.34838s
+
+10-01-2020 @ 09:56:59 - Response
+code: 400
+message:
+headers: Array
+(
+    [0] => HTTP/2 400
+    [date] => Thu, 01 Oct 2020 10:01:12 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [content-length] => 224
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: Array
+(
+    [errors] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [code] => INVALID_VALUE
+                    [detail] => This business can only process payments in USD but amount was provided in AUD.
+                    [field] => order.line_items[0].base_price_money.currency
+                    [category] => INVALID_REQUEST_ERROR
+                )
+
+        )
+
+)
+
+10-01-2020 @ 09:56:59 - Status code INVALID_VALUE: This business can only process payments in USD but amount was provided in AUD.
+10-01-2020 @ 10:11:58 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => MASTERCARD
+    [last_4] => 5100
+    [exp_month] => 9
+    [exp_year] => 2024
+    [billing_postal_code] => 422013
+)
+
+10-01-2020 @ 10:12:34 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => MASTERCARD
+    [last_4] => 5100
+    [exp_month] => 9
+    [exp_year] => 2024
+    [billing_postal_code] => 422013
+)
+
+10-01-2020 @ 10:12:51 - Square.js Response:
+ Array
+(
+    [digital_wallet_type] => NONE
+    [card_brand] => MASTERCARD
+    [last_4] => 5100
+    [exp_month] => 9
+    [exp_year] => 2024
+    [billing_postal_code] => 422013
+)
+
+10-01-2020 @ 10:12:56 - Request
+method:
+uri: createOrderWithHttpInfo/LMVNBRKFCJ2CZ
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "order": {
+        "reference_id": "136",
+        "line_items": [
+            {
+                "name": "HIGH POTENCY BROAD SPECTRUM",
+                "quantity": "1",
+                "applied_taxes": [],
+                "base_price_money": {
+                    "amount": 700,
+                    "currency": "USD"
+                }
+            }
+        ],
+        "taxes": []
+    },
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:136_0"
+}
+duration: 1.19646s
+
+10-01-2020 @ 10:12:56 - Response
+code: 200
+message:
+headers: Array
+(
+    [0] => HTTP/2 200
+    [date] => Thu, 01 Oct 2020 10:17:10 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json;charset=utf-8
+    [square-version] => 2019-08-14
+    [vary] => Accept-Encoding, User-Agent
+    [content-length] => 1243
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: {
+    "order": {
+        "id": "vwYbHonJ9l4YHht2vfJ7VllnS2BZY",
+        "location_id": "LMVNBRKFCJ2CZ",
+        "reference_id": "136",
+        "source": {
+            "name": "Sandbox for sq0idp-_7EWls-XeQFdQ_4aKD3bVQ"
+        },
+        "line_items": [
+            {
+                "uid": "nMaiXgcd0R9xibmJtqfI9",
+                "name": "HIGH POTENCY BROAD SPECTRUM",
+                "quantity": "1",
+                "base_price_money": {
+                    "amount": 700,
+                    "currency": "USD"
+                },
+                "variation_total_price_money": {
+                    "amount": 700,
+                    "currency": "USD"
+                },
+                "gross_sales_money": {
+                    "amount": 700,
+                    "currency": "USD"
+                },
+                "total_tax_money": {
+                    "amount": 0,
+                    "currency": "USD"
+                },
+                "total_discount_money": {
+                    "amount": 0,
+                    "currency": "USD"
+                },
+                "total_money": {
+                    "amount": 700,
+                    "currency": "USD"
+                }
+            }
+        ],
+        "net_amounts": {
+            "total_money": {
+                "amount": 700,
+                "currency": "USD"
+            },
+            "tax_money": {
+                "amount": 0,
+                "currency": "USD"
+            },
+            "discount_money": {
+                "amount": 0,
+                "currency": "USD"
+            },
+            "tip_money": {
+                "amount": 0,
+                "currency": "USD"
+            },
+            "service_charge_money": {
+                "amount": 0,
+                "currency": "USD"
+            }
+        },
+        "created_at": "2020-10-01T10:17:10.774Z",
+        "updated_at": "2020-10-01T10:17:10.774Z",
+        "state": "OPEN",
+        "version": 1,
+        "total_money": {
+            "amount": 700,
+            "currency": "USD"
+        },
+        "total_tax_money": {
+            "amount": 0,
+            "currency": "USD"
+        },
+        "total_discount_money": {
+            "amount": 0,
+            "currency": "USD"
+        },
+        "total_service_charge_money": {
+            "amount": 0,
+            "currency": "USD"
+        }
+    }
+}
+
+10-01-2020 @ 10:12:58 - Request
+method:
+uri: createPaymentWithHttpInfo
+user-agent: WooCommerce-Square/2.2.2 (WooCommerce/4.5.2; WordPress/5.5.1)
+headers: Array
+(
+)
+body: {
+    "source_id": "cnon:CBASEMNywxhF_-MN2pWJAhXQD1g",
+    "idempotency_key": "31b10fe323ff8e65216994cf5ab8bcb7:136_0",
+    "amount_money": {
+        "amount": 700,
+        "currency": "USD"
+    },
+    "autocomplete": true,
+    "order_id": "vwYbHonJ9l4YHht2vfJ7VllnS2BZY",
+    "customer_id": "RBG7P5HSV0R175J5BJ7FZWAVVW",
+    "location_id": "LMVNBRKFCJ2CZ",
+    "reference_id": "136",
+    "buyer_email_address": "darshanabagul24@gmail.com",
+    "billing_address": {
+        "address_line_1": "mohini",
+        "address_line_2": "gknagar",
+        "locality": "nashik",
+        "administrative_district_level_1": "MH",
+        "postal_code": "422013",
+        "country": "IN",
+        "first_name": "darshana",
+        "last_name": "wagh",
+        "organization": "cbdcom"
+    },
+    "note": "Madre Terra - Order 136"
+}
+duration: 1.37605s
+
+10-01-2020 @ 10:12:58 - Response
+code: 200
+message:
+headers: Array
+(
+    [0] => HTTP/2 200
+    [date] => Thu, 01 Oct 2020 10:17:11 GMT
+    [frame-options] => DENY
+    [x-frame-options] => DENY
+    [x-content-type-options] => nosniff
+    [x-xss-protection] => 1; mode=block
+    [content-type] => application/json
+    [square-version] => 2019-08-14
+    [squareup--connect--v2--common--versionmetadata-bin] => CgoyMDE5LTA4LTE0
+    [vary] => Accept-Encoding, User-Agent
+    [content-length] => 1279
+    [strict-transport-security] => max-age=631152000; includeSubDomains; preload
+)
+body: {
+    "payment": {
+        "id": "RIqr9Vc3nY0AES1BoPSQgIUark6YY",
+        "created_at": "2020-10-01T10:17:11.884Z",
+        "updated_at": "2020-10-01T10:17:12.105Z",
+        "amount_money": {
+            "amount": 700,
+            "currency": "USD"
+        },
+        "total_money": {
+            "amount": 700,
+            "currency": "USD"
+        },
+        "status": "COMPLETED",
+        "source_type": "CARD",
+        "card_details": {
+            "status": "CAPTURED",
+            "card": {
+                "card_brand": "MASTERCARD",
+                "last_4": "5100",
+                "exp_month": 9,
+                "exp_year": 2024,
+                "fingerprint": "sq-1-ltLfl6hIefCF2gZTsb47lN2Uoe37i65xjeORwdLHtrdVy0NDccV2ToigHJagh25PBQ"
+            },
+            "entry_method": "KEYED",
+            "cvv_status": "CVV_ACCEPTED",
+            "avs_status": "AVS_ACCEPTED"
+        },
+        "location_id": "LMVNBRKFCJ2CZ",
+        "order_id": "vwYbHonJ9l4YHht2vfJ7VllnS2BZY",
+        "reference_id": "136",
+        "customer_id": "RBG7P5HSV0R175J5BJ7FZWAVVW",
+        "buyer_email_address": "darshanabagul24@gmail.com",
+        "billing_address": {
+            "address_line_1": "mohini",
+            "address_line_2": "gknagar",
+            "locality": "nashik",
+            "administrative_district_level_1": "MH",
+            "postal_code": "422013",
+            "country": "IN"
+        },
+        "note": "Madre Terra - Order 136"
+    }
+}
+
