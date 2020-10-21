@@ -1,0 +1,110 @@
+
+/* new added css */
+.facebook-feed-row{
+		  width:100%;
+		  min-height:100px;
+		  margin:20px 0;
+	  }
+	  
+	  .facebook-feed-opt-left,.facebook-feed-prev-right{
+		  float:left;
+		  width:48%;
+		  margin:0 1%;
+		  min-height:10px;
+	  }
+	  
+	  .facebook-feed-opt-left{
+		  
+	  }
+	  
+	  .facebook-feed-prev-right{
+		  padding:10px 0;
+	  }
+	  
+	  .facebook-feed-table{
+		  background-color:#ECECEC;
+	  }
+	  
+	  .facebook-feed-table tr{
+	  width:98%; 
+	  padding:0 10px; 
+	  display:block; 
+	  }
+	  
+	  .default_colors,.new_color_scheme{ 
+	  display:none;
+	  }
+	  
+	  #poststuff h2 { 
+	  border-bottom: 1px solid #279FD3; 
+	  box-shadow: 0px 8px 21px -10px #279FD3;
+	  }
+       
+	  .social-icon-opt{ 
+	  min-height:20px; 
+	  }
+	  .social-icon-opt{ 
+	  width:100%;
+	  }
+	  .social-icon-prev-inner{
+	  width:100%; 
+	  background-color:#DDDDDD; 
+	  text-align:center; 
+	  margin: 10px 0px; 
+	  padding:15px 0; 
+	  border:1px solid #EDEDED; 
+	  }
+	  .sm-preview-pane-load{ 
+	  display:none; 
+	  }
+	  .clearfix{ 
+	  clear:both; 
+	  }
+	  
+	  .fa {
+		  display: inline-block;
+		  font-family: FontAwesome;
+		  font-style: normal;
+		  font-weight: normal;
+		  line-height: 1;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		}
+		
+		.spoontalk-social {
+		  color: white !important;
+		  text-align: center !important;
+		  margin-bottom: 5px;
+		  border-radius: 20%;
+		  line-height: 51px !important;
+		  width: 48px !important;
+		  height: 48px !important;
+		  font-size: 2em !important;
+		}
+		
+/* new added css */
+
+
+/* Styling for social icons */
+.fb-spoontalk-social { background: #3b5998; }
+
+.tw-spoontalk-social { background: #00aced; }
+
+.linkedin-spoontalk-social { background: #007bb6; }
+
+.g-plus-spoontalk-social{ background:#f74425 ; }
+
+.rss-spoontalk-social { background: #C58542; }
+
+.youtube-spoontalk-social { background: #bb0000; }
+
+.pinterest-spoontalk-social {background: #cb2027; }
+
+.flickr-spoontalk-social { background: #ff0084; }
+
+.instagram-spoontalk-social { background: #517fa4; }
+
+.dribble-spoontalk-social { background: #00bf8f; }
+
+
+/* Styling for social icons */

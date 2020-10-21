@@ -1,0 +1,16 @@
+.espbw-clearfix:before, .espbw-clearfix:after {content: "";display: table;}
+.espbw-clearfix::after {clear: both;}
+.espbw-hide{display: none;}
+
+.espbw-dashboard-logo{text-align: center;}
+.espbw-dashboard-logo img{border: 1px solid #ff59a3;}
+.espbw-plugin-card-wrap{margin: 0 0 16px 0; display: inline-block; vertical-align: top; width: 50%; padding: 0 8px; font-size: 13px; box-sizing: border-box;}
+.espbw-plugin-list{margin: 0 -8px; font-size:0.001px; width: auto;}
+.espbw-plugin-list .plugin-card{float: none; width: 100%; margin: 0;}
+.espbw-dashboard-title{text-align: center;}
+.espbw-dashboard-title h2{margin: 10px 0 8px 0; font-size: 1.8em}
+.espbw-dashboard-title-inr{display: inline-block; text-align: right;}
+.espbw-dashboard-title-inr span{display: inline-block; font-weight: 600; text-decoration: underline;}
+.espbw-filter .espbw-search-inp{margin: 0; border-radius: 0;}
+.espbw-filter a:focus{box-shadow: none; outline: 0;}
+.espbw-search-no-result{clear: both; text-align: center; font-size: 16px;}
