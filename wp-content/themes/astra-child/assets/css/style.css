@@ -116,7 +116,7 @@
   }
   
   h1 {
-    font-size: 60px;
+    font-size: 66px;
     text-transform: uppercase;
     color: #fff;
   }
@@ -211,3 +211,40 @@
     margin-top: 60px;
     padding: 15px;
   }
+
+/*home page css */
+.head-sec {
+  text-align: center;
+}
+.head-sec span {
+    border-top: 3px solid #ebc912;
+    width: 54px;
+    height: 3px;
+    display: block;
+    margin: 0 auto 10px;
+}
+.head-sec h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 20px;
+}
+.head-sec-h1 {
+  text-align: left
+}
+.head-sec-h1 span {
+    border-top: 3px solid #ebc912;
+    width: 54px;
+    height: 3px;
+    display: block;
+    margin: 0 0 10px;
+}
+.head-sec-h1 h1 {
+  font-size: 60px;
+  font-family: "Galliard";
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: left;
+  margin: 0 0 20px;
+}
