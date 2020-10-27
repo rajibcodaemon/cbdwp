@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   ?>
 >
 <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?></a>
-  	<header class="inner-header">
+  	<header class="inner-header banner-section">
   		<div class="container">
 		    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		      <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
