@@ -47,7 +47,7 @@ a:hover {
   text-decoration: none;
 }
 
-.entry-content p{
+.entry-content p {
   font-family: "FuturaPT";
   font-size: 16px;
   line-height: 22px;
@@ -143,15 +143,33 @@ h1 {
   color: #fff;
 }
 
+.banner-content h1{
+  position: relative;
+}
+
+.banner-content h1:after {
+  content: "";
+  position: absolute;
+  left:0;
+  top: -17px;
+  width: 50px;
+  height: 3px;
+  background: #ebc912;
+}
+
 .cta {
   background-color: #ebc912;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 8px 15px;
+  padding: 8px 20px;
   display: inline-block;
   color: #fff;
   border-radius: 24px;
+}
+
+.cta:hover {
+  background-color: #B3980A;
 }
 
 footer.main {
@@ -174,13 +192,12 @@ footer.main .social-icons li {
   display: inline-block;
 }
 
-footer.main .social-icons li a {
+footer.main .social-icons li a{
   color: #fff;
   border: 1px solid #fff;
   border-radius: 100%;
   width: 30px;
   height: 30px;
-  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,41 +252,30 @@ footer.main .bottom-section {
   padding: 15px;
 }
 
-/*home page css */
-.head-sec {
-  text-align: center;
+footer.main .widget-title {
+  color: #97adb7;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }
-.head-sec span {
-  border-top: 3px solid #ebc912;
-  width: 54px;
-  height: 3px;
-  display: block;
-  margin: 0 auto 10px;
-}
-.head-sec h2 {
-  font-size: 36px;
-  line-height: 1.2;
+
+#text-3 .widget-title{
   color: #fff;
-  text-align: center;
-  margin: 0 0 20px;
 }
-.head-sec-h1 {
-  text-align: left;
+
+.instagram-spoontalk-social, .instagram-spoontalk-social, .tw-spoontalk-social, .linkedin-spoontalk-social, .fb-spoontalk-social {
+  background-color: transparent;
 }
-.head-sec-h1 span {
-  border-top: 3px solid #ebc912;
-  width: 54px;
-  height: 3px;
-  display: block;
-  margin: 0 0 10px;
+
+.spoontalk-sociamedia-icons-widget a i {
+  border: 1px solid #fff;
+  border-radius: 100%;
 }
-.head-sec-h1 h1 {
-  font-size: 60px;
-  font-family: "Galliard";
-  line-height: 1.2;
-  color: #ffffff;
-  text-align: left;
-  margin: 0 0 20px;
+
+.spoontalk-sociamedia-icons-widget a i:hover {
+  border: 1px solid #ebc912;
+  background-color: #ebc912;
 }
 
 /* 22/10/2020 */
@@ -284,26 +290,26 @@ footer.main .bottom-section {
   color: #ebc912;
 }
 
-.different-list{
+.different-list {
   color: #fff;
 }
 
-.different-list li{
+.different-list li {
   display: flex;
   margin-bottom: 30px;
 }
-.different-list li:last-child{
+.different-list li:last-child {
   margin-bottom: 0;
 }
 
-.different-list li p{
+.different-list li p {
   color: #fff;
   font-size: 18px;
   font-weight: normal;
   line-height: 22px;
 }
 
-.different-list li span{
+.different-list li span {
   color: #ebc912;
   margin-right: 10px;
 }
@@ -311,23 +317,116 @@ footer.main .bottom-section {
 .elementor-heading-title {
   position: relative;
 }
-.elementor-heading-title:after {
-  content:'';
-  position:absolute;
-  left:calc(50% - 25px);
-  top:-17px;
-  width:50px;
-  height:3px;
-  background:#ebc912;
+h2.elementor-heading-title:after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 25px);
+  top: -17px;
+  width: 50px;
+  height: 3px;
+  background: #ebc912;
 }
 
-div[data-id="e0805fd"] .elementor-heading-title:after{
+div[data-id="e0805fd"] h2.elementor-heading-title:after {
   left: auto;
   right: 0;
-  top:-15px;
+  top: -15px;
 }
-div[data-id="30823dd"] .elementor-heading-title:after{
+div[data-id="30823dd"] h2.elementor-heading-title:after {
   left: 0;
   right: auto;
-  top:-15px;
+  top: -15px;
+}
+
+/* Slick slider style */
+.wpsisac-slick-slider h2.wpsisac-slide-title {
+  font-size: 36px;
+  color: #fff;
+  font-family: "Galliard" !important;
+  line-height: 44px;
+  margin-bottom: 15px;
+}
+.wpsisac-slick-slider.design-4
+  .wpsisac-image-slide
+  .wpsisac-slide-wrap
+  .wpsisac-slider-short-content
+  p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 29px;
+  font-family: "FuturaPT";
+}
+
+.wpsisac-slick-slider.design-4
+  .wpsisac-image-slide
+  .wpsisac-slide-wrap
+  .wpsisac-slider-short-content
+  ul {
+  margin-top: 30px;
+}
+.wpsisac-slick-slider.design-4
+  .wpsisac-image-slide
+  .wpsisac-slide-wrap
+  .wpsisac-slider-short-content
+  ul
+  li {
+  color: #fff;
+  display: flex;
+  margin-bottom: 10px;
+}
+.wpsisac-slick-slider.design-4
+  .wpsisac-image-slide
+  .wpsisac-slide-wrap
+  .wpsisac-slider-short-content
+  ul
+  li
+  span {
+  color: #ebc912;
+  margin-right: 10px;
+}
+
+.wpsisac-slick-slider.design-4
+  .wpsisac-image-slide
+  .wpsisac-slide-wrap
+  .wpsisac-slider-short-content
+  ul
+  li
+  p {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "FuturaPT";
+}
+
+.wpsisac-slick-slider button.slick-prev,
+.wpsisac-slick-slider button.slick-prev:hover,
+.wpsisac-slick-slider button.slick-prev:focus,
+.wpsisac-slick-slider button.slick-next,
+.wpsisac-slick-slider button.slick-next:hover,
+.wpsisac-slick-slider button.slick-next:focus {
+  background-color: transparent !important;
+}
+
+.wpsisac-slide-wrap .wpsisac-readmore a.wpsisac-slider-readmore {
+  margin-top:20px;
+  background-color: #ebc912;
+  border-color: #ebc912;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 24px;
+}
+.wpsisac-slide-wrap .wpsisac-readmore a.wpsisac-slider-readmore:hover {
+  background-color: #B3980A;
+  border-color: #B3980A;
+}
+
+.wpsisac-slick-slider .slick-dots li.slick-active button{
+  background: #ebc912 !important;
+}
+.wpsisac-slick-slider .slick-dots li button{
+  background-color: #001523 !important;
+  border-color: #ebc912;
 }
