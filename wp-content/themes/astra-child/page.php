@@ -17,10 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-get_header('inner-pages'); ?>
+get_header(); ?>
 
 	<div id="primary" <?php astra_primary_class(); ?>>
-		iiiii page
 		<?php astra_primary_content_top(); ?>
 
 		<?php astra_content_page_loop(); ?>

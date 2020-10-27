@@ -18,9 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
-
 	<div id="primary" <?php astra_primary_class(); ?>>
-		in home index
 		<?php the_content();?>
 		<?php astra_primary_content_top(); ?>
 
