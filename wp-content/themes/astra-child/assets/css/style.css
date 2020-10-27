@@ -179,6 +179,15 @@ footer.main {
   padding-top: 60px;
 }
 
+footer.main p a {
+  color: #fff;
+  font-size: 13px;
+}
+
+footer.main p a:hover {
+  color:#97adb7;
+}
+
 footer.main ol,
 footer.main ul {
   margin: 0;
@@ -317,7 +326,7 @@ p.para-bycolor span {
 h2.elementor-heading-title, h2 {
   position: relative;
 }
-h2.elementor-heading-title:after, h2:after {
+h2.elementor-heading-title:after {
   content: "";
   position: absolute;
   left: calc(50% - 25px);
@@ -332,7 +341,7 @@ div[data-id="e0805fd"] h2.elementor-heading-title:after {
   right: 0;
   top: -15px;
 }
-div[data-id="30823dd"] h2.elementor-heading-title:after {
+div[data-id="47f2fc5"] h2.elementor-heading-title:after {
   left: 0;
   right: auto;
   top: -15px;
