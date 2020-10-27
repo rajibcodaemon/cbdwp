@@ -20,5 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header(); ?>
 	<div id="primary" <?php astra_primary_class(); ?>>
 		<?php the_content();?>
+		<?php astra_primary_content_top(); ?>
+		<?php astra_content_loop(); ?>
+		<?php astra_primary_content_bottom(); ?>
 	</div><!-- #primary -->
+
 <?php get_footer(); ?>
