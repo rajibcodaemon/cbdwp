@@ -279,14 +279,14 @@ footer.main .widget-title {
 }
 
 /* 22/10/2020 */
-.entry-content p.para-bycolor {
+p.para-bycolor {
   color: #fff;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
 }
 
-.entry-content p.para-bycolor span {
+p.para-bycolor span {
   color: #ebc912;
 }
 
@@ -314,10 +314,10 @@ footer.main .widget-title {
   margin-right: 10px;
 }
 
-.elementor-heading-title {
+h2.elementor-heading-title, h2 {
   position: relative;
 }
-h2.elementor-heading-title:after {
+h2.elementor-heading-title:after, h2:after {
   content: "";
   position: absolute;
   left: calc(50% - 25px);
