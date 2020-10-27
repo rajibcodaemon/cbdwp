@@ -47,35 +47,37 @@ if ( ! defined( 'ABSPATH' ) ) {
   ?>
 >
 <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?></a>
-  	<header class="container inner-header">
-	    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	      <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-	      $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-	      ?>
-	      <a class="navbar-brand" href="<?php echo get_home_url();?>">
-	        <?php if(!empty($image)) { ?>
-	          <?php echo '<img class="img-fluid" src="'.$image[0].'">'; ?>
-	        <?php } ?>
-	      </a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-	        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	      </button>
-	      
-	        <?php 
-	        wp_nav_menu(array(
-	          'theme_location' => 'primary',
-	          'container' => 'div',
-	          'container_class' => 'collapse navbar-collapse', 
-	          'container_id'    => 'navbarSupportedContent',
-	          'menu_class' => '',
-	          'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s</ul>'
-	        ));?>
-	    </nav>
+  	<header class="inner-header">
+  		<div class="container">
+		    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		      <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+		      $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+		      ?>
+		      <a class="navbar-brand" href="<?php echo get_home_url();?>">
+		        <?php if(!empty($image)) { ?>
+		          <?php echo '<img class="img-fluid" src="'.$image[0].'">'; ?>
+		        <?php } ?>
+		      </a>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="navbar-toggler-icon"></span>
+		      </button>
+		      
+		        <?php 
+		        wp_nav_menu(array(
+		          'theme_location' => 'primary',
+		          'container' => 'div',
+		          'container_class' => 'collapse navbar-collapse', 
+		          'container_id'    => 'navbarSupportedContent',
+		          'menu_class' => '',
+		          'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s</ul>'
+		        ));?>
+		    </nav>
+		</div>
   </header>
   <?php astra_content_before(); ?>
   <div id="content" class="site-content inner-content">
-    <div class="ast-container">
+    <div class="container">
     <?php astra_content_top(); ?>
 
 
