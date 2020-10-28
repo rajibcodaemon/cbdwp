@@ -30,24 +30,25 @@ if ( $related_products ) : ?>
 			?>
 			<h2><?php echo esc_html( $heading ); ?></h2>
 		<?php endif; ?>
-		
-		<?php woocommerce_product_loop_start(); ?>
-
-			<?php foreach ( $related_products as $related_product ) : ?>
-
-					<?php
-					
-					$post_object = get_post( $related_product->get_id() );
-
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
-
-					wc_get_template_part( 'content', 'product' );
-					?>
-
-			<?php endforeach; ?>
-
-		<?php woocommerce_product_loop_end(); ?>
-
+		<div class="row">
+			<?php woocommerce_product_loop_start(); ?>
+				<?php foreach ( $related_products as $related_product ) : 
+						$post_object = get_post( $related_product->get_id() );
+						$product_url = get_permalink( $related_product->get_id() );
+						setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+						?>
+						<div class="col-md-4">
+					        <div class="product-thumb">
+					            <figure>
+					                <a href="<?php echo $product_url; ?>"><?php echo get_the_post_thumbnail($related_products->post->ID, 'shop_catalog') ?></a>
+					            </figure>
+					            <h4><a href="<?php echo $product_url; ?>"><?php the_title(); ?></a></h4>
+					            <p class="price"><?php echo $related_product->get_price_html(); ?></p>
+					        </div>
+					    </div>
+				<?php endforeach; ?>
+			<?php woocommerce_product_loop_end(); ?>
+		</div>
 	</section>
 	<?php
 endif;

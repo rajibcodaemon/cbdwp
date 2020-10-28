@@ -485,6 +485,25 @@ max-width: unset;
 .product-img {
   background-color: #eff4f6;
 }
+.product-thumb{
+    margin-bottom: 30px;
+}
+.product-thumb figure{
+    background-color: #eff4f6;
+    padding: 25px;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+.product-thumb h4{
+    font-size: 18px;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.product-thumb .price{
+    color: #222;
+    font-size: 16px;
+}
 .woocommerce .woocommerce-breadcrumb {
   color: #ebc912;
 }
@@ -519,7 +538,6 @@ max-width: unset;
   border-radius: 24px;
 }
 
-
 .woocommerce a.button:hover,
 .woocommerce button.button.alt:hover,
 .woocommerce-page table.cart td.actions .button:hover,
@@ -536,30 +554,143 @@ max-width: unset;
   color: #ebc912;
 }
 
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active:before{
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active:before {
   background: #ebc912;
 }
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
   color: #005d86;
 }
-.woocommerce-Tabs-panel--description p{
+.woocommerce-Tabs-panel--description p {
   margin-bottom: 15px;
 }
-.woocommerce-Tabs-panel--description p strong, .woocommerce-Tabs-panel--description p span{
+.woocommerce-Tabs-panel--description p strong,
+.woocommerce-Tabs-panel--description p span {
   color: #ebc912;
 }
-.woocommerce-Tabs-panel--description ul{
+.woocommerce-Tabs-panel--description ul {
   margin: 10px 0;
 }
-.woocommerce-Tabs-panel--description ul li{
+.woocommerce-Tabs-panel--description ul li {
   list-style: none;
   position: relative;
 }
-.woocommerce-Tabs-panel--description ul li span{
+.woocommerce-Tabs-panel--description ul li span {
   color: #ebc912;
   margin-right: 6px;
 }
-.woocommerce-Tabs-panel--description h4, .woocommerce-Tabs-panel--description h5{
-  margin-top:15px;
+.woocommerce-Tabs-panel--description h4,
+.woocommerce-Tabs-panel--description h5 {
+  margin-top: 15px;
   color: #005d86;
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+  .elementor-38
+    .elementor-element.elementor-element-a8fd807
+    > .elementor-element-populated {
+    padding: 15px;
+  }
+  h2.elementor-heading-title {
+    font-size: 30px;
+  }
+  .elementor-38 .elementor-element .elementor-button {
+    font-size: 12px;
+  }
+  .banner-content h1 {
+    font-size: 40px;
+  }
+  .banner-section .banner-content {
+    padding: 50px 0;
+  }
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .different-list li p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .different-list li {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .elementor-38
+    .elementor-element.elementor-element-8a42b73
+    > .elementor-widget-container {
+    padding: 20px;
+  }
+  .elementor-38 .elementor-element.elementor-element-0bb1204,
+  .elementor-38 .elementor-element.elementor-element-5cb53dc,
+  .elementor-38 .elementor-element.elementor-element-c7cf88c {
+    padding: 40px 0;
+  }
+  .wpsisac-slick-slider.design-4
+    .wpsisac-image-slide
+    .wpsisac-slide-wrap
+    .wpsisac-content-left {
+    padding: 20px 0;
+  }
+  .wpsisac-slick-slider h2.wpsisac-slide-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .wpsisac-slick-slider.design-4
+    .wpsisac-image-slide
+    .wpsisac-slide-wrap
+    .wpsisac-slider-short-content
+    p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .wpsisac-slick-slider.design-4
+    .wpsisac-image-slide
+    .wpsisac-slide-wrap
+    .wpsisac-slider-short-content
+    ul
+    li
+    p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .wpsisac-slick-slider.design-4
+    .wpsisac-image-slide
+    .wpsisac-slide-wrap
+    .wpsisac-slider-short-content
+    ul
+    li {
+    margin-bottom: 6px;
+  }
+  footer.main {
+    padding-top: 30px;
+  }
+  .widget {
+    margin: 0 0 1em 0;
+  }
+  footer.main .widget-title{
+    margin-top: 15px;
+  }
+  footer.main .bottom-section{
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .banner-content h1 {
+    font-size: 36px;
+  }
+
+  h2.elementor-heading-title {
+    font-size: 26px;
+  }
+  .cta {
+    font-size: 14px;
+  }
+  .elementor-text-editor p {
+    font-size: 14px;
+  }
 }
