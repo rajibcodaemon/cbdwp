@@ -616,6 +616,14 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
   color: #005d86;
 }
 
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+  font-size: 16px;
+}
+
+a, abbr, acronym, address, applet, big, blockquote, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, iframe, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var{
+  font-family: "FuturaPT" !important;
+}
+
 @media (max-width: 1199.98px) {
 }
 
