@@ -352,6 +352,19 @@ h2 {
 
 .related.products h2 {
   color: #005d86;
+  margin-top: 70px;
+}
+
+.woocommerce-privacy-policy-text {
+  margin-bottom: 20px;
+}
+
+.product-name a,
+.shipping-calculator-button,
+.woocommerce-privacy-policy-link,
+.woocommerce-form__label,
+#order_review_heading {
+  color: #005d86;
 }
 
 h2.elementor-heading-title:after,
@@ -712,6 +725,12 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
     .elementor-element.elementor-element-ffe51e9
     .elementor-heading-title {
     font-size: 26px;
+  }
+  .woocommerce div.product .product_title {
+    font-size: 26px;
+  }
+  .related.products h2 {
+    margin-top: 50px;
   }
 }
 
