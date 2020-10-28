@@ -467,3 +467,14 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after {
 .content-area.primary {
   background-color: #ffffff;
 }
+
+.woocommerce .col-1, .col-2{ max-width:none;}
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1,.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+max-width: unset;
+}
+.woocommerce-checkout .col-1, .woocommerce-checkout .col-2 {
+  max-width: inherit;
+}
+.woocommerce-input-wrapper {
+  width:100%;
+}
