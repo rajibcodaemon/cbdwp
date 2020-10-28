@@ -363,7 +363,8 @@ h2 {
 .shipping-calculator-button,
 .woocommerce-privacy-policy-link,
 .woocommerce-form__label,
-#order_review_heading {
+#order_review_heading,
+.ast-single-post .entry-title, .page-title {
   color: #005d86;
 }
 
@@ -544,7 +545,7 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
   color: #005d86;
   font-size: 36px;
 }
-.woocommerce-Price-amount {
+.summary.entry-summary .woocommerce-Price-amount {
   color: #ebc912;
   font-weight: bold;
 }
@@ -587,9 +588,10 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active:before {
   background: #ebc912;
 }
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce-Tabs-panel--description p a {
   color: #005d86;
 }
+
 .woocommerce-Tabs-panel--description p {
   margin-bottom: 15px;
 }
