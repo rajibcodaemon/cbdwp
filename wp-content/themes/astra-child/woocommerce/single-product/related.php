@@ -40,7 +40,7 @@ if ( $related_products ) : ?>
 						<div class="col-md-4">
 					        <div class="product-thumb">
 					            <figure>
-					                <a href="<?php echo $product_url; ?>"><?php echo get_the_post_thumbnail($related_products->post->ID, 'shop_catalog') ?></a>
+					                <a href="<?php echo $product_url; ?>"><?php echo get_the_post_thumbnail($related_product->post->ID, 'shop_catalog') ?></a>
 					            </figure>
 					            <h4><a href="<?php echo $product_url; ?>"><?php the_title(); ?></a></h4>
 					            <p class="price"><?php echo $related_product->get_price_html(); ?></p>
