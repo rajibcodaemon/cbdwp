@@ -54,8 +54,8 @@
                 $section_1 = astra_get_small_footer( 'footer-sml-section-1' );
                 $section_2 = astra_get_small_footer( 'footer-sml-section-2' );
             ?>
-            <div class="col-md-6"><?php echo $section_1; ?></div>
-            <div class="col-md-6 text-right"><?php echo $section_2; ?></div>
+            <div class="col-6"><?php echo $section_1; ?></div>
+            <div class="col-6 text-right"><?php echo $section_2; ?></div>
           </div>
         </div>
       </div>
