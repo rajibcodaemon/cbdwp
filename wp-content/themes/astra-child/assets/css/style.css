@@ -478,3 +478,9 @@ max-width: unset;
 .woocommerce-input-wrapper {
   width:100%;
 }
+.product-img {
+  background-color: #eff4f6;
+}
+.woocommerce div.product .product_title {
+  
+}
