@@ -472,19 +472,6 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after {
 .content-area.primary {
   background-color: #ffffff;
 }
-.woocommerce .col-1, .col-2{ max-width:none;}
-.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1,.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
-max-width: unset;
-}
-.woocommerce-checkout .col-1, .woocommerce-checkout .col-2 {
-  max-width: inherit;
-}
-.woocommerce-input-wrapper {
-  width:100%;
-}
-.product-img {
-  background-color: #eff4f6;
-}
 .product-thumb{
     margin-bottom: 30px;
 }
@@ -503,6 +490,19 @@ max-width: unset;
 .product-thumb .price{
     color: #222;
     font-size: 16px;
+}
+.woocommerce .col-1, .col-2{ max-width:none;}
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1,.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+max-width: unset;
+}
+.woocommerce-checkout .col-1, .woocommerce-checkout .col-2 {
+  max-width: inherit;
+}
+.woocommerce-input-wrapper {
+  width:100%;
+}
+.product-img {
+  background-color: #eff4f6;
 }
 .woocommerce .woocommerce-breadcrumb {
   color: #ebc912;
@@ -616,6 +616,9 @@ max-width: unset;
   .different-list li {
     margin-bottom: 15px;
   }
+  .elementor-38 .elementor-element.elementor-element-e0805fd .elementor-heading-title{
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -677,6 +680,12 @@ max-width: unset;
   footer.main .bottom-section{
     margin-top: 30px;
   }
+  .elementor-38 .elementor-element.elementor-element-8871ef9 .elementor-heading-title,
+  .elementor-38 .elementor-element.elementor-element-4d11c4a .elementor-heading-title,
+  .elementor-38 .elementor-element.elementor-element-68a356d .elementor-heading-title,
+  .elementor-38 .elementor-element.elementor-element-ffe51e9 .elementor-heading-title{
+    font-size: 26px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -692,5 +701,10 @@ max-width: unset;
   }
   .elementor-text-editor p {
     font-size: 14px;
+  }
+  .elementor-38 .elementor-element.elementor-element-e336fd2 .elementor-button,
+  .elementor-38 .elementor-element.elementor-element-a8af50e .elementor-button,
+  .wpsisac-slide-wrap .wpsisac-readmore a.wpsisac-slider-readmore{
+    font-size: 12px;
   }
 }
