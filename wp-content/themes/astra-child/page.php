@@ -25,7 +25,7 @@ get_header('inner-pages'); ?>
 		<?php astra_content_page_loop(); ?>
 
 		<?php astra_primary_content_bottom(); ?>
-		<?php phpinfo(); ?>
+
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
