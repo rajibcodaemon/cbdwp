@@ -362,7 +362,8 @@ h2 {
 .product-name a,
 .shipping-calculator-button,
 .woocommerce-privacy-policy-link,
-.ast-single-post .entry-title, .page-title {
+.ast-single-post .entry-title,
+.page-title {
   color: #005d86;
 }
 
@@ -586,7 +587,8 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active:before {
   background: #ebc912;
 }
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce-Tabs-panel--description p a {
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
+.woocommerce-Tabs-panel--description p a {
   color: #005d86;
 }
 
@@ -614,35 +616,145 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
   color: #005d86;
 }
 
-.woocommerce div.product p.price, .woocommerce div.product span.price {
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
   font-size: 16px;
 }
 
-a, abbr, acronym, address, applet, big, blockquote, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, html, iframe, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, tr, tt, ul, var{
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+html,
+iframe,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+tr,
+tt,
+ul,
+var {
   font-family: "FuturaPT" !important;
 }
 .elementor-text-editor {
   font-family: "FuturaPT" !important;
 }
 
-.woocommerce-checkout #payment div.payment_box .form-row{
+.woocommerce-checkout #payment div.payment_box .form-row {
   display: flex;
   align-items: center;
 }
 .woocommerce-checkout #payment ul.payment_methods li input {
   margin: -5px 5px 0 0;
 }
-.woocommerce form .form-row label{
-  font-size: .85rem;
+.woocommerce form .form-row label {
+  font-size: 0.85rem;
 }
-.woocommerce-page.woocommerce-checkout form #order_review{
-  padding:0 12px;
+.woocommerce-page.woocommerce-checkout form #order_review {
+  padding: 0 12px;
 }
 ul.payment_methods li input {
-  margin: 0 .5em 0 0;
+  margin: 0 0.5em 0 0;
 }
-.woocommerce-page.woocommerce-checkout form #order_review_heading{
+.woocommerce-page.woocommerce-checkout form #order_review_heading {
   padding: 1.5em 12px 1em;
+}
+
+.woocommerce a,
+.woocommerce-MyAccount-content a,
+.woocommerce-MyAccount-navigation-link a {
+  color: #005d86;
+}
+
+.woocommerce a:hover,
+.woocommerce-MyAccount-content a:hover {
+  color: #004463;
+}
+.woocommerce-form-login__submit {
+  margin-left: 20px;
+}
+.woocommerce .woocommerce-message a.button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce input.button,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled],
+.woocommerce input.button:disabled:hover,
+.woocommerce input.button:disabled[disabled]:hover,
+.woocommerce #respond input#submit,
+.woocommerce button.button.alt.disabled,
+.wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
+.wc-block-grid__product-onsale {
+  color: #ffffff;
+  border-color: #ebc912;
+  background-color: #ebc912;
+}
+
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce .woocommerce-message a.button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce input.button,
+.woocommerce-cart table.cart td.actions .button,
+.woocommerce form.checkout_coupon .button,
+.woocommerce #respond input#submit,
+.wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+  border-radius: 24px;
+}
+.password-input {
+  width: 100%;
+  display: block;
+}
+.woocommerce .addresses .title .edit,
+.woocommerce-account .addresses .title .edit {
+  background-color: #ebc912;
+  color: #fff;
+  padding: 0.3em 1.5em;
+  border-radius: 24px;
+}
+.woocommerce .addresses .title .edit:hover,
+.woocommerce-account .addresses .title .edit:hover {
+  background-color: #b3980a;
 }
 
 @media (max-width: 1199.98px) {
