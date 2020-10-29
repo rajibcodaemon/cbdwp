@@ -846,7 +846,9 @@ ul.payment_methods li input {
     border: 2px solid #ebc912;
     border-bottom: 0;
 }
-
+.cart-icon a {
+  color: #ebc912;
+}
 .woocommerce-info {
   margin-bottom: 20px !important;
 }
