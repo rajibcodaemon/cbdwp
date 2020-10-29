@@ -549,6 +549,7 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 }
 .woocommerce .woocommerce-breadcrumb {
   color: #ebc912;
+  margin-bottom: 30px;
 }
 .woocommerce .woocommerce-breadcrumb a {
   color: #888888;
@@ -732,6 +733,7 @@ ul.payment_methods li input {
 
 .woocommerce-form-login__submit {
   margin-left: 20px !important;
+  margin-bottom: 10px !important;
 }
 
 .woocommerce a.button,
