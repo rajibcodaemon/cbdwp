@@ -8,28 +8,6 @@
           <div class="col-md-3">
             <figure>
               <?php dynamic_sidebar( 'advanced-footer-widget-1' ); ?>
-              <!--<ul class="social-icons">
-                <li>
-                  <a href="#"
-                    ><i class="fa fa-instagram" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="fa fa-twitter" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="fa fa-facebook" aria-hidden="true"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="fa fa-linkedin" aria-hidden="true"></i
-                  ></a>
-                </li>
-              </ul>-->
             </figure>
           </div>
           <div class="col-md-3 get-in-touch">
