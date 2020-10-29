@@ -686,7 +686,7 @@ var {
 }
 .elementor-text-editor {
   font-family: "FuturaPT" !important;
-  color: #222;
+  color: #444;
 }
 
 .elementor-widget-heading .elementor-heading-title {
@@ -730,7 +730,7 @@ ul.payment_methods li input {
 }
 
 .woocommerce-form-login__submit {
-  margin-bottom: 20px !important;
+  margin-left: 20px !important;
 }
 
 .woocommerce a.button,
@@ -846,11 +846,32 @@ ul.payment_methods li input {
     border: 2px solid #ebc912;
     border-bottom: 0;
 }
-.cart-icon a {
-  color: #ebc912;
+
+.woocommerce-info {
+  margin-bottom: 20px !important;
 }
 
-@media (max-width: 1199.98px) {
+.product-table-data {
+  margin: 30px 0;
+  padding: 0;
+  border: 1px solid #c7c7c7;
+}
+
+.product-table-data li {
+  padding: 10px;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.product-table-data li:last-child {
+  border-bottom: none;
+}
+
+.product-table-data li h4{
+  color: #005d86;
+  margin-bottom: 10px;
+}
+.product-table-data li p{
+  color: #444;
 }
 
 @media (max-width: 991.98px) {
@@ -978,6 +999,7 @@ ul.payment_methods li input {
   h2.elementor-heading-title {
     font-size: 26px;
   }
+
   .cta {
     font-size: 14px;
   }
