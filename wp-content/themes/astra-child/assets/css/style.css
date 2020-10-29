@@ -105,6 +105,8 @@ a:hover {
   z-index: 99999;
   margin: 0;
   min-width: 103px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 10px -2px rgba(0,0,0,.1);
 }
 
 .banner-section .navbar-nav .menu-item-has-children .sub-menu .menu-item {
@@ -144,6 +146,15 @@ a:hover {
   transition: visibility 0.2s ease, transform 0.2s ease;
   transition: visibility 0.2s ease, transform 0.2s ease,
     -webkit-transform 0.2s ease;
+}
+
+.banner-section .navbar-nav .sub-menu .menu-link{
+  border-bottom: 1px solid #eaeaea;
+  padding: .9em 1em;
+  display: block;
+}
+.banner-section .navbar-nav .sub-menu .menu-link:hover{
+  color: #005d86;
 }
 
 .banner-section .banner-content {
