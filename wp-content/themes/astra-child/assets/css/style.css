@@ -362,8 +362,6 @@ h2 {
 .product-name a,
 .shipping-calculator-button,
 .woocommerce-privacy-policy-link,
-.woocommerce-form__label,
-#order_review_heading,
 .ast-single-post .entry-title, .page-title {
   color: #005d86;
 }
@@ -620,8 +618,31 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
   font-size: 16px;
 }
 
-a, abbr, acronym, address, applet, big, blockquote, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, iframe, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var{
+a, abbr, acronym, address, applet, big, blockquote, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, html, iframe, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, tr, tt, ul, var{
   font-family: "FuturaPT" !important;
+}
+.elementor-text-editor {
+  font-family: "FuturaPT" !important;
+}
+
+.woocommerce-checkout #payment div.payment_box .form-row{
+  display: flex;
+  align-items: center;
+}
+.woocommerce-checkout #payment ul.payment_methods li input {
+  margin: -5px 5px 0 0;
+}
+.woocommerce form .form-row label{
+  font-size: .85rem;
+}
+.woocommerce-page.woocommerce-checkout form #order_review{
+  padding:0 12px;
+}
+ul.payment_methods li input {
+  margin: 0 .5em 0 0;
+}
+.woocommerce-page.woocommerce-checkout form #order_review_heading{
+  padding: 1.5em 12px 1em;
 }
 
 @media (max-width: 1199.98px) {
