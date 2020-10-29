@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="profile" href="https://gmpg.org/xfn/11">
+
 <?php wp_head(); ?>
 </head>
 
@@ -56,16 +57,22 @@ if ( ! defined( 'ABSPATH' ) ) {
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          
-            <?php 
-            wp_nav_menu(array(
-              'theme_location' => 'primary',
-              'container' => 'div',
-              'container_class' => 'collapse navbar-collapse', 
-              'container_id'    => 'navbarSupportedContent',
-              'menu_class' => '',
-              'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s</ul>'
-            ));?>
+            <?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+                $count = WC()->cart->cart_contents_count;
+              } 
+            $url = WC()->cart->get_cart_url();
+              wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse', 
+                'container_id'    => 'navbarSupportedContent',
+                'menu_class' => '',
+                'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s <li>
+                    <span class="cart-icon"><a href="'.$cart.'">'.$count.'</a>
+                    </span>
+                  </li></ul>'
+              ));
+            ?>
         </nav>
       </header>
       <div class="banner-content">

@@ -106,7 +106,7 @@ a:hover {
   margin: 0;
   min-width: 103px;
   border: 1px solid #eaeaea;
-  box-shadow: 0 4px 10px -2px rgba(0,0,0,.1);
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.1);
 }
 
 .banner-section .navbar-nav .menu-item-has-children .sub-menu .menu-item {
@@ -148,12 +148,12 @@ a:hover {
     -webkit-transform 0.2s ease;
 }
 
-.banner-section .navbar-nav .sub-menu .menu-link{
+.banner-section .navbar-nav .sub-menu .menu-link {
   border-bottom: 1px solid #eaeaea;
-  padding: .9em 1em;
+  padding: 0.9em 1em;
   display: block;
 }
-.banner-section .navbar-nav .sub-menu .menu-link:hover{
+.banner-section .navbar-nav .sub-menu .menu-link:hover {
   color: #005d86;
 }
 
@@ -567,7 +567,8 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .woocommerce .woocommerce-message a.button,
 .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout,
 .woocommerce button.button.alt.disabled,
-.wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+.wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
+.wpcf7-form-control.wpcf7-submit {
   background-color: #ebc912;
   border-color: #ebc912;
   font-size: 16px;
@@ -587,7 +588,8 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .woocommerce .woocommerce-message a.button:hover,
 .ast-site-header-cart .widget_shopping_cart .buttons .button.checkout:hover,
 .woocommerce button.button.alt.disabled:hover,
-.wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+.wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover,
+.wpcf7-form-control.wpcf7-submit:hover {
   background-color: #b3980a;
 }
 
@@ -684,6 +686,16 @@ var {
 }
 .elementor-text-editor {
   font-family: "FuturaPT" !important;
+  color: #222;
+}
+
+.elementor-widget-heading .elementor-heading-title {
+  color: #005d86 !important;
+  font-weight: 400 !important;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+  display: none;
 }
 
 .woocommerce-checkout #payment div.payment_box .form-row {
@@ -716,9 +728,13 @@ ul.payment_methods li input {
 .woocommerce-MyAccount-content a:hover {
   color: #004463;
 }
+
 .woocommerce-form-login__submit {
-  margin-left: 20px;
+  margin-bottom: 20px !important;
 }
+
+.woocommerce a.button,
+.woocommerce button.button,
 .woocommerce .woocommerce-message a.button,
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
@@ -751,7 +767,25 @@ ul.payment_methods li input {
 .woocommerce #respond input#submit,
 .wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
   border-radius: 24px;
+  color: #ffffff;
+  border-color: #ebc912;
+  background-color: #ebc912;
 }
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce .woocommerce-message a.button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce input.button:hover,
+.woocommerce-cart table.cart td.actions .button:hover,
+.woocommerce form.checkout_coupon .button:hover,
+.woocommerce #respond input#submit:hover,
+.wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+  background-color: #b3980a;
+}
+
 .password-input {
   width: 100%;
   display: block;
@@ -766,6 +800,54 @@ ul.payment_methods li input {
 .woocommerce .addresses .title .edit:hover,
 .woocommerce-account .addresses .title .edit:hover {
   background-color: #b3980a;
+}
+
+.elementor-text-editor ul {
+  padding-left: 20px;
+}
+.elementor-text-editor a {
+  color: #005d86;
+}
+.elementor-text-editor a:hover {
+  color: #004463;
+}
+
+.cart-icon {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    min-width: 20px;
+    min-height:20px;
+    font-size: .86em;
+    line-height: 1.8;
+    border-radius: 0 0 .3em .3em;
+    padding: 0 .4em;
+    color: #ebc912;
+    border: 2px solid #ebc912;
+    margin-top:5px;
+    margin-left:20px;
+}
+
+.cart-icon:after {
+    bottom: 100%;
+    margin-bottom: 0;
+    height: .8em;
+    width: .8em;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -.6em;
+    content: ' ';
+    position: absolute;
+    pointer-events: none;
+    border-top-left-radius: 10em;
+    border-top-right-radius: 10em;
+    border: 2px solid #ebc912;
+    border-bottom: 0;
+}
+.cart-icon a {
+  color: #ebc912;
 }
 
 @media (max-width: 1199.98px) {
