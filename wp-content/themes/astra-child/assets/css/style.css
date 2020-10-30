@@ -134,6 +134,7 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
   margin-left: 10px;
   line-height: normal;
+  color: #ebc912;
 }
 
 .banner-section .navbar-nav .sub-menu {
@@ -561,6 +562,18 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .summary.entry-summary .woocommerce-Price-amount {
   color: #ebc912;
   font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+}
+.summary.entry-summary h1:after {
+  background: none;
+}
+.summary.entry-summary .woocommerce .woocommerce-breadcrumb {
+  margin-bottom: 13px;
+}
+.woocommerce div.product form.cart div.quantity {
+  float: none;
+  margin: 0 0px 20px 0;
 }
 .woocommerce a.button,
 .woocommerce button.button.alt,
@@ -625,6 +638,13 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .woocommerce-Tabs-panel--description ul li span {
   color: #ebc912;
   margin-right: 6px;
+  font-size: 13px;
+}
+.woocommerce-Tabs-panel--description ul li {
+  margin-bottom: 15px;
+}
+.woocommerce-Tabs-panel--description ul li:last-child {
+  margin-bottom: 0px;
 }
 .woocommerce-Tabs-panel--description h4,
 .woocommerce-Tabs-panel--description h5 {
@@ -708,7 +728,7 @@ var {
   margin: -5px 5px 0 0;
 }
 .woocommerce form .form-row label {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 .woocommerce-page.woocommerce-checkout form #order_review {
   padding: 0 12px;
@@ -892,6 +912,27 @@ ul.payment_methods li input {
 }
 .woocommerce-product-details__short-description {
   margin: 15px 0 20px 0;
+}
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="reset"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+  background-color: #fff;
+}
+
+label.ur-label,
+.ur-frontend-form
+  .ur-form-row
+  .ur-form-grid
+  .hide_show_password
+  .password-input-group {
+  width: 100%;
 }
 
 @media (max-width: 991.98px) {
