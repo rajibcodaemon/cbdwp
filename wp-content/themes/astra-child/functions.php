@@ -37,3 +37,16 @@ remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_prod
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+add_filter( 'woocommerce_output_related_products_args', 'bbloomer_change_number_related_products', 9999 );
+ 
+function bbloomer_change_number_related_products( $args ) {
+ $args['posts_per_page'] = 3; // # of related products
+ $args['columns'] = 1; // # of columns per row
+ return $args;
+}
+
+function remove_image_zoom_support() {
+    remove_theme_support( 'wc-product-gallery-zoom' );
+}
+add_action( 'after_setup_theme', 'remove_image_zoom_support', 100 );

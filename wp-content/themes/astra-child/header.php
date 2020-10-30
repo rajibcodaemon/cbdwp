@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
                 $count = WC()->cart->cart_contents_count;
               } 
-             //$url = wc_get_cart_url();
+              $url = wc_get_cart_url();
               wp_nav_menu(array(
                 'theme_location' => 'primary',
                 'container' => 'div',
@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 'container_id'    => 'navbarSupportedContent',
                 'menu_class' => '',
                 'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s <li>
-                    <span class="cart-icon"><a href="#">'.$count.'</a>
+                    <span class="cart-icon"><a href="'.$url.'">'.$count.'</a>
                     </span>
                   </li></ul>'
               ));
