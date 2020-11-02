@@ -345,8 +345,8 @@ replace bullet to arrow in details page ul li
    position: absolute;
    border-right:1px solid #ebc912;
    border-bottom:1px solid #ebc912;
-   width:7px;
-   height:7px;
+   width:6px;
+   height:6px;
    top: calc(50% - 4px);
    left: -20px;
    transform: translateY(-50%) rotate(-45deg);
@@ -524,6 +524,7 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .wpsisac-slick-slider .slick-dots li button {
   background-color: #001523 !important;
   border-color: #ebc912;
+  border-radius: 0 !important;
 }
 .astra-shop-thumbnail-wrap {
   background-color: #eff4f6;
