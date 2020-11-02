@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="profile" href="https://gmpg.org/xfn/11">
-<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fevicon.ico" type="image/icon type">
+<script src="<?php echo get_stylesheet_directory_uri()?>/assets/js/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
 <?php wp_head(); ?>
 </head>
 
