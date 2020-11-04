@@ -4,7 +4,7 @@ Tags: fedex, fedex woocommerce, woocommerce fedex, fedex shipping, shipping
 Requires at least: 4.0.1
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 2.4.1
+Stable tag: 2.5.6
 License: GPLv3 or later License
 URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -84,6 +84,39 @@ A). Yes, it is completely compatible.
 > 	return $ship_cost+1000;
 > }
 
+2) Filter to set Flat rate
+
+> function fedex_shipping_cost_conversion($ship_cost, $pack_weight = 0, $to_country = '', $rate_code = ''){
+>	$sample_flat_rates = array("GB"=>array(		//Use ISO 3166-1 alpha-2 as country code
+>								"weight_from" => 10,
+>								"weight_upto" => 30,
+>								"rate" => 2000,
+>								"rate_code" => "INTERNATIONAL_FIRST",		//You can add fedex service type here. Get this from Fedex Dev docs - Appendix -> Service Types
+>								),
+>							"US"=>array(
+>								"weight_from" => 10,
+>								"weight_upto" => 30,
+>								"rate" => 5000,
+>								),
+>							);
+>
+>	if(!empty($to_country) && !empty($sample_flat_rates)){
+>		if(isset($sample_flat_rates[$to_country]) && ($pack_weight >= $sample_flat_rates[$to_country]['weight_from']) && ($pack_weight <= $sample_flat_rates[$to_country]['weight_upto'])){
+>			$flat_rate = $sample_flat_rates[$to_country]['rate'];
+>			return $flat_rate;
+>		}else{
+>			return $ship_cost;
+>		}
+>	}else{
+>		return $ship_cost;
+>	}
+>
+> }
+> add_filter('hitstacks_fedex_shipping_cost_conversion','fedex_shipping_cost_conversion',10,4);
+
+(Note: Flat rate filter example code will set flat rate for all fedex carriers. Have to add code to check and alter rate for specific carrier.
+ While copy paste the code from worpress plugin page may throw error "Undefined constant". It can be fixed by replacing backtick (`) to apostrophe (') inside add_filter())
+
 = About FedEx =
 
 FedEx Corporation is an American multinational courier delivery services company headquartered in Memphis, Tennessee. The name "FedEx" is a syllabic abbreviation of the name of the company's original air division, Federal Express, which was used from 1973 until 2000.
@@ -106,6 +139,34 @@ We are Web Development Company in France. We are planning for High Quality WordP
 5. Output - Edit Order Page Shipping Section.
 
 == Changelog ==
+
+= 2.5.6 =
+*Release Date - 30 Oct 2020*
+	> Removed parent credentials on rate request.
+
+= 2.5.5 =
+*Release Date - 29 Oct 2020*
+	> Added filter to set flat rate.
+
+= 2.5.4 =
+*Release Date - 26 Oct 2020*
+	> Minor bugs fixes.
+
+= 2.5.3 =
+*Release Date - 25 Oct 2020*
+	> Minor bugs fixed.
+
+= 2.5.2 =
+*Release Date - 23 Oct 2020*
+	> Minor bugs fixed.
+
+= 2.5.1 =
+*Release Date - 22 Oct 2020*
+	> Minor bugs fixed.
+
+= 2.5.0 =
+*Release Date - 19 Oct 2020*
+	> Added option to exclude country.
 
 = 2.4.1 =
 *Release Date - 29 Aug 2020*

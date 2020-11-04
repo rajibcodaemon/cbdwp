@@ -3,10 +3,6 @@
    <soapenv:Body>
       <v22:RateRequest>
          <v22:WebAuthenticationDetail>
-            <v22:ParentCredential>
-               <v22:Key>{key}</v22:Key>
-               <v22:Password>{pwd}</v22:Password>
-            </v22:ParentCredential>
             <v22:UserCredential>
                <v22:Key>{key}</v22:Key>
                <v22:Password>{pwd}</v22:Password>

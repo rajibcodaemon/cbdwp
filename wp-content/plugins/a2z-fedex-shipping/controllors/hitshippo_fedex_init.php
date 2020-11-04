@@ -43,12 +43,16 @@ if ( ! class_exists( 'hitshippo_fedex' ) ) {
          */
         public function calculate_shipping( $package = array() ) {
 
+			
 			$pack_aft_hook = apply_filters('hitshippo_fedex_rate_packages', $package);
 
 			if(empty($pack_aft_hook)){
 				return;
 			}
-
+			
+			
+			
+				
 			$fedex_core = array();
 			$_carriers = array(
 						'FIRST_OVERNIGHT'                    => 'FedEx First Overnight',
@@ -342,8 +346,19 @@ if ( ! class_exists( 'hitshippo_fedex' ) ) {
 			$fedex_core['ZM'] = array('currency' =>'ZMW', 'weight' => 'KG_CM');
 			$fedex_core['ZW'] = array('currency' =>'USD', 'weight' => 'KG_CM');
 			$general_settings = get_option('hitshippo_fedex_main_settings');
+			if(empty($general_settings)){
+				return false;
+			}
 			$general_settings = empty($general_settings) ? array() : $general_settings;
 
+			//excluded Countries
+			
+			if(isset($general_settings['hitshippo_fedex_exclude_countries'])){
+
+			if(in_array($pack_aft_hook['destination']['country'],$general_settings['hitshippo_fedex_exclude_countries'])){
+				return;
+				}
+			}
 			$custom_settings = array();
 			$custom_settings['default'] = array(
 												'hitshippo_fedex_site_id' => $general_settings['hitshippo_fedex_site_id'],
@@ -758,28 +773,67 @@ if ( ! class_exists( 'hitshippo_fedex' ) ) {
 					)
 				);
 
-				$result = str_replace(array(':','-'), '', $result);
-			
-				libxml_use_internal_errors(true);
-				if(!empty($result))
-				{
-					$xml = simplexml_load_string(utf8_encode($result['body']));
-				}
 
 				if(isset($general_settings['hitshippo_fedex_developer_rate']) && $general_settings['hitshippo_fedex_developer_rate'] == 'yes')
 				{
 					echo "<pre>";
-					echo "<h1> Request </h1><br/>";
+					echo "<h3> Request </h3><br/>";
 					print_r($request_url);
 					print_r(htmlspecialchars($xmlRequest));
-					// echo '<br/><h1>Response</h1> <br/>';
-					// print_r($result);
-					echo "<br/><h1> Response - XML </h1><br/>";
-					print_r($xml->SOAPENVBody->RateReply);
-					die();
-				
+					echo '<br/><h3>Response</h3> <br/>';
+					if(isset($result) && !empty($result)){
+						print_r($result);
+					}else{
+						print_r("No rate response from Fedex");
+						die();
+					}
+					// echo "<br/><h1> Response - XML </h1><br/>";
+					// print_r($xml->SOAPENVBody->RateReply);
+					
 				}
-				$xml = $xml->SOAPENVBody->RateReply;
+
+				if(isset($result) && !empty($result) ){
+					$result = str_replace(array(':','-'), '', $result);
+				}else{
+
+					if(isset($general_settings['hitshippo_fedex_developer_rate']) && $general_settings['hitshippo_fedex_developer_rate'] == 'yes')
+					{
+						die();
+					}
+					return false;
+				}
+			
+				libxml_use_internal_errors(true);
+				if(!empty($result) && isset($result['body']))
+				{
+					$xml = simplexml_load_string(utf8_encode($result['body']));
+
+					if(isset($general_settings['hitshippo_fedex_developer_rate']) && $general_settings['hitshippo_fedex_developer_rate'] == 'yes')
+					{
+						echo '<br/><h3>Response Body</h3> <br/>';
+						print_r($xml);
+						die();
+					}
+
+				}else{
+
+					if(isset($general_settings['hitshippo_fedex_developer_rate']) && $general_settings['hitshippo_fedex_developer_rate'] == 'yes')
+					{
+						echo '<br/><h3>Response Body</h3> <br/>';
+						print_r("Empty");
+						die();
+					}
+
+					return false;
+				}
+
+
+				if(isset($xml) && isset($xml->SOAPENVBody->RateReply)){
+					$xml = $xml->SOAPENVBody->RateReply;
+				}else{
+					return false;
+				}
+				
 				if(empty($xml->RateReplyDetails))
 				{
 					return false;
@@ -915,14 +969,16 @@ if ( ! class_exists( 'hitshippo_fedex' ) ) {
 							if(!isset($general_settings['hitshippo_fedex_v_rates']) || $general_settings['hitshippo_fedex_v_rates'] != 'yes'){
 								$multi_ven = '';
 							}
+							
 
 							// This is where you'll add your rates
 							$rate = array(
 								'id'       => 'hitshippo'.$rate_code,
 								'label'    => $name,
-								'cost'     => apply_filters("hitstacks_fedex_shipping_cost_conversion", $rate_cost),
+								'cost'     => apply_filters("hitstacks_fedex_shipping_cost_conversion", $rate_cost, $total_weight_for_rate, $pack_aft_hook['destination']['country'], $rate_code),
 								'meta_data' => array('hitshippo_fedex_multi_ven' => $multi_ven, 'hitshippo_fedex_service' => $rate_code, 'hitshippo_fedex_shipping_charge' => $rate_cost)
 							);
+							
 							
 							// Register the rate
 							

@@ -3,7 +3,7 @@
  * Plugin Name: Automated FedEx Shipping
  * Plugin URI: https://a2zplugins.com/product/fedex-shipping-with-label-printing/
  * Description: Realtime Shipping Rates, Premium Version Supports Fedex Label Printing
- * Version: 2.4.1
+ * Version: 2.5.6
  * Author: HITStacks
  * Author URI: https://hitstacks.com/hitshipo.php
  * Developer: HITStacks
