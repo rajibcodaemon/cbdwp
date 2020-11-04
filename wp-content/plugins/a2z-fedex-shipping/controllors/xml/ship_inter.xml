@@ -3,10 +3,6 @@
    <soapenv:Body>
       <v21:ProcessShipmentRequest>
          <v21:WebAuthenticationDetail>
-            <v21:ParentCredential>
-               <v21:Key>{key}</v21:Key>
-               <v21:Password>{pwd}</v21:Password>
-            </v21:ParentCredential>
             <v21:UserCredential>
                <v21:Key>{key}</v21:Key>
                <v21:Password>{pwd}</v21:Password>

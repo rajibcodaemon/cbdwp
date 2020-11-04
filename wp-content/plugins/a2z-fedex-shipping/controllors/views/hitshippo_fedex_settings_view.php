@@ -645,6 +645,7 @@ $countires =  array(
 		$general_settings['hitshippo_fedex_con_rate'] = sanitize_text_field(isset($_POST['hitshippo_fedex_con_rate']) ? $_POST['hitshippo_fedex_con_rate'] : '');
 		$general_settings['hitshippo_fedex_auto_con_rate'] = sanitize_text_field(isset($_POST['hitshippo_fedex_auto_con_rate']) ? 'yes' : 'no');
 		$general_settings['hitshippo_fedex_currency'] = sanitize_text_field(isset($_POST['hitshippo_fedex_currency']) ? $_POST['hitshippo_fedex_currency'] : '');
+		$general_settings['hitshippo_fedex_exclude_countries'] = !empty($_POST['hitshippo_fedex_exclude_countries']) ? $_POST['hitshippo_fedex_exclude_countries'] : array();
 		// update_option('hitshippo_fedex_main_settings', $general_settings);
 	
 		// Multi Vendor Settings
@@ -779,7 +780,7 @@ if(!isset($general_settings['hitshippo_fedex_site_id']) || $general_settings['hi
 				<table style="width:100%;">
 					<tr>
 						<td>
-							<h4> <span class="woocommerce-help-tip" data-tip="<?php _e('This is fedex.com login Username.','hitshippo_fedex') ?>"></span>	<?php _e('Fedex Web Service Key','hitshippo_fedex') ?><font style="color:red;">*</font></h4>
+							<h4> <span class="woocommerce-help-tip" data-tip="<?php _e('Use Your Webservice Key here','hitshippo_fedex') ?>"></span>	<?php _e('Fedex Web Service Key','hitshippo_fedex') ?><font style="color:red;">*</font></h4>
 						</td>
 						<td>
 							<input type="text" name="hitshippo_fedex_site_id" value="<?php echo (isset($general_settings['hitshippo_fedex_site_id'])) ? $general_settings['hitshippo_fedex_site_id'] : ''; ?>">
@@ -787,7 +788,7 @@ if(!isset($general_settings['hitshippo_fedex_site_id']) || $general_settings['hi
 					</tr>
 					<tr>
 						<td>
-							<h4> <span class="woocommerce-help-tip" data-tip="<?php _e('This is fedex.com login Password','hitshippo_fedex') ?>"></span>	<?php _e('Web Service Password','hitshippo_fedex') ?><font style="color:red;">*</font></h4>
+							<h4> <span class="woocommerce-help-tip" data-tip="<?php _e('Use Your Webservice Password here','hitshippo_fedex') ?>"></span>	<?php _e('Web Service Password','hitshippo_fedex') ?><font style="color:red;">*</font></h4>
 						</td>
 						<td>
 							<input type="text" name="hitshippo_fedex_site_pwd" value="<?php echo (isset($general_settings['hitshippo_fedex_site_pwd'])) ? $general_settings['hitshippo_fedex_site_pwd'] : ''; ?>">
@@ -819,7 +820,7 @@ if(!isset($general_settings['hitshippo_fedex_site_id']) || $general_settings['hi
 					</tr>
 					<tr>
 						<td>
-							<h4> <span class="woocommerce-help-tip" data-tip="<?php _e('Select the fedex Weight Unit of Yours.','hitshippo_fedex') ?>"></span>	<?php _e('Fedex Weight Unit','hitshippo_fedex') ?><font style="color:red;">*</font></h4>
+							<h4> <span class="woocommerce-help-tip" data-tip="<?php _e('Select the Fedex weight Unit.','hitshippo_fedex') ?>"></span>	<?php _e('Fedex Weight Unit','hitshippo_fedex') ?><font style="color:red;">*</font></h4>
 						</td>
 						<td>
 							<select name="hitshippo_fedex_weight_unit">
@@ -872,6 +873,7 @@ if(!isset($general_settings['hitshippo_fedex_site_id']) || $general_settings['hi
 					</tr>
 					<tr class="con_rate">
 						<td>
+						<?php $general_settings['hitshippo_fedex_currency'] = empty($general_settings['hitshippo_fedex_currency'])? '' : $general_settings['hitshippo_fedex_currency'] ?>
 							<h4> <span class="woocommerce-help-tip" data-tip="<?php _e('Enter conversion rate.','hitshippo_fedex') ?>"></span>	<?php _e('Exchange Rate','hitshippo_fedex') ?><font style="color:red;">*</font> <?php echo "( ".$general_settings['hitshippo_fedex_woo_currency']."->".$general_settings['hitshippo_fedex_currency']." )"; ?></h4>
 						</td>
 						<td>
@@ -1015,6 +1017,29 @@ if(!isset($general_settings['hitshippo_fedex_site_id']) || $general_settings['hi
 						</td>
 						<td>
 							<input type="checkbox" name="hitshippo_fedex_res_f" <?php echo (isset($general_settings['hitshippo_fedex_res_f']) && $general_settings['hitshippo_fedex_res_f'] == 'yes') ? 'checked="true"' : ''; ?> value="yes" > <?php _e('Yes','hitshippo_fedex') ?>
+						</td>
+					</tr>
+					<tr>
+						<td style=" width: 50%; ">
+							<h4> <span class="woocommerce-help-tip" data-tip="<?php _e('Rates Will not be shown to Selected Countries','hitshippo_fedex') ?>"></span>	<?php _e('Exclude Countries','hitshippo_fedex') ?></h4>
+						</td>
+						<td>
+
+							<select name="hitshippo_fedex_exclude_countries[]" multiple="true" class="wc-enhanced-select">
+
+								<?php
+								$general_settings['hitshippo_fedex_exclude_countries'] = empty($general_settings['hitshippo_fedex_exclude_countries']) ? array() :  $general_settings['hitshippo_fedex_exclude_countries'];
+								 foreach ($countires as $key => $county){
+									if(in_array($key,$general_settings['hitshippo_fedex_exclude_countries'])){
+										echo "<option value=".$key." selected='true'>".$county."</option>";
+									}else{
+										echo "<option value=".$key.">".$county."</option>";	
+									}
+									
+								}
+							?>
+
+							</select>
 						</td>
 					</tr>
 
