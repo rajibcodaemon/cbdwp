@@ -41,7 +41,15 @@ if ( ! defined( 'ABSPATH' ) ) {
   ?>
 >
 <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?></a>
-  <section class="banner-section">
+  <?php 
+    if ( has_post_thumbnail()) {
+      //the_post_thumbnail();
+      $url = get_the_post_thumbnail_url( null, $size ); 
+    ?>
+      <section class="banner-section" style="background: url('<?php echo esc_url($url) ?>')no-repeat 0 0;">
+  <?php } else {?>
+    <section class="banner-section">
+  <?php } ?>
     <div class="container">
       <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">

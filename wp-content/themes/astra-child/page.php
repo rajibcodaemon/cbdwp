@@ -16,16 +16,14 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-get_header('inner-pages'); ?>
-
-	<div id="primary" <?php astra_primary_class(); ?>>
+get_header('inner-pages');
+?>
+<div id="primary" <?php astra_primary_class(); ?>>
 		<?php astra_primary_content_top(); ?>
 
 		<?php astra_content_page_loop(); ?>
 
 		<?php astra_primary_content_bottom(); ?>
 
-	</div><!-- #primary -->
-
+</div><!-- #primary -->
 <?php get_footer(); ?>

@@ -41,7 +41,18 @@ if ( ! defined( 'ABSPATH' ) ) {
   ?>
 >
 <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?></a>
-  	<header class="inner-header banner-section">
+  	<?php
+  	if(!is_shop() && !is_product()) {
+    if ( has_post_thumbnail()) {
+      //the_post_thumbnail();
+      $url = get_the_post_thumbnail_url( null, $size ); 
+    ?>
+      <header style="background: url('<?php echo esc_url($url) ?>')no-repeat 0 0;" class="banner-section">
+    <?php } else { ?>
+    	<header class="inner-header banner-section">
+    <?php } } else { ?>
+    	<header class="inner-header banner-section">
+    <?php } ?>
   		<div class="container">
 		    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		      <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
