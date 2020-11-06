@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   	if(!is_shop() && !is_product()) {
     if ( has_post_thumbnail()) {
       //the_post_thumbnail();
-      $url = get_the_post_thumbnail_url( null, $size ); 
+      $url = get_the_post_thumbnail_url(); 
     ?>
       <header style="background: url('<?php echo esc_url($url) ?>')no-repeat 0 0;" class="banner-section">
     <?php } else { ?>
