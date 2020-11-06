@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   <?php 
     if ( has_post_thumbnail()) {
       //the_post_thumbnail();
-      $url = get_the_post_thumbnail_url( null, $size ); 
+      $url = get_the_post_thumbnail_url(); 
     ?>
       <section class="banner-section" style="background: url('<?php echo esc_url($url) ?>')no-repeat 0 0;">
   <?php } else {?>
