@@ -1061,6 +1061,9 @@ p.woocommerce-Message {
 .woocommerce-Address-title.title{
  margin-top: 20px;
 }
+.woocommerce-MyAccount-content h3{
+  color: #fff;
+}
 
 @media (max-width: 991.98px) {
   .elementor-38
