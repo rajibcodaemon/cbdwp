@@ -55,7 +55,15 @@ a:hover {
   color: #fff;
 }
 
-.woocommerce-Tabs-panel--description ul li, .woocommerce-Tabs-panel--description ul li a, .woocommerce-Tabs-panel--description div, .woocommerce-Tabs-panel--description table, .woocommerce-Tabs-panel--description td {
+.entry-content h2 {
+  color: #fff;
+}
+
+.woocommerce-Tabs-panel--description ul li,
+.woocommerce-Tabs-panel--description ul li a,
+.woocommerce-Tabs-panel--description div,
+.woocommerce-Tabs-panel--description table,
+.woocommerce-Tabs-panel--description td {
   color: #fff;
 }
 
@@ -344,17 +352,17 @@ replace bullet to arrow in details page ul li
   margin-left: 17px;
 }
 
-#tab-description ul li:before, 
-.wpsisac-slider-short-content ul li:before{
-   content: '';
-   position: absolute;
-   border-right:1px solid #ebc912;
-   border-bottom:1px solid #ebc912;
-   width:6px;
-   height:6px;
-   top: calc(50% - 4px);
-   left: -20px;
-   transform: translateY(-50%) rotate(-45deg);
+#tab-description ul li:before,
+.wpsisac-slider-short-content ul li:before {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #ebc912;
+  border-bottom: 1px solid #ebc912;
+  width: 6px;
+  height: 6px;
+  top: calc(50% - 4px);
+  left: -20px;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 /* 22/10/2020 */
@@ -651,7 +659,7 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active:before {
   background: #ebc912;
 }
-.woocommerce div.product .woocommerce-tabs ul.tabs{
+.woocommerce div.product .woocommerce-tabs ul.tabs {
   border-top: 1px solid #80aec3;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -784,12 +792,12 @@ ul.payment_methods li input {
 .woocommerce a,
 .woocommerce-MyAccount-content a,
 .woocommerce-MyAccount-navigation-link a {
-  color: #005d86;
+  color: #fff;
 }
 
 .woocommerce a:hover,
 .woocommerce-MyAccount-content a:hover {
-  color: #004463;
+  color: #fff;
 }
 
 .woocommerce-form-login__submit {
@@ -954,7 +962,7 @@ ul.payment_methods li input {
 .woocommerce-product-details__short-description {
   margin: 15px 0 20px 0;
 }
-.woocommerce-product-details__short-description p{
+.woocommerce-product-details__short-description p {
   color: #fff;
 }
 input[type="email"],
@@ -979,21 +987,55 @@ label.ur-label,
   width: 100%;
 }
 
-.ast-separate-container .ast-woocommerce-container, .content-area.primary {
+.ast-separate-container .ast-woocommerce-container,
+.content-area.primary {
   background-color: #005d86;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.7);
 }
 
-.ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single{
+.ast-separate-container .ast-article-post,
+.ast-separate-container .ast-article-single {
   background-color: #005d86;
 }
 
-.woocommerce-Tabs-panel--description table, .woocommerce-Tabs-panel--description td{
+.woocommerce-Tabs-panel--description table,
+.woocommerce-Tabs-panel--description td {
   border-color: #c7c7c7;
 }
 
-.ur-frontend-form .ur-form-row .ur-form-grid label.ur-label, .ur-frontend-form .ur-form-row .ur-form-grid legend.ur-label {
+.ur-frontend-form .ur-form-row .ur-form-grid label.ur-label,
+.ur-frontend-form .ur-form-row .ur-form-grid legend.ur-label {
   color: #fff;
+}
+.ur-frontend-form .ur-form-row .ur-form-grid select {
+  color: #fff;
+}
+.woocommerce table.shop_table,
+.woocommerce-page table.shop_table {
+  border-color: #c7c7c7;
+}
+.woocommerce table.shop_table thead,
+.woocommerce-page table.shop_table thead,
+.woocommerce-cart .cart-collaterals .cart_totals > h2,
+.woocommerce-cart .cart-collaterals .cross-sells > h2 {
+  background-color: #c7c7c7;
+}
+.woocommerce #content table.cart td, .woocommerce-page #content table.cart td {
+  color: #fff;
+}
+
+.shop-table tbody, .shop-table td, .shop-table tr, #order_review_heading {
+  color: #fff;
+}
+
+.woocommerce-billing-fields h3, .woocommerce-billing-fields label span{
+  color: #fff;
+}
+.woocommerce-page.woocommerce-checkout form #order_review {
+  color: #fff;
+}
+.payment_box.payment_method_bacs p{
+  color: #000;
 }
 
 @media (max-width: 991.98px) {
