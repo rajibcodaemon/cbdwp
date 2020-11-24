@@ -992,6 +992,10 @@ label.ur-label,
   border-color: #c7c7c7;
 }
 
+.ur-frontend-form .ur-form-row .ur-form-grid label.ur-label, .ur-frontend-form .ur-form-row .ur-form-grid legend.ur-label {
+  color: #fff;
+}
+
 @media (max-width: 991.98px) {
   .elementor-38
     .elementor-element.elementor-element-a8fd807
