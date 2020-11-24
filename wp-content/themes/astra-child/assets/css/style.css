@@ -1010,6 +1010,9 @@ label.ur-label,
 .ur-frontend-form .ur-form-row .ur-form-grid select {
   color: #fff;
 }
+.ur-frontend-form .ur-form-row .ur-form-grid select option {
+  color: #515151;
+}
 .woocommerce table.shop_table,
 .woocommerce-page table.shop_table {
   border-color: #c7c7c7;
