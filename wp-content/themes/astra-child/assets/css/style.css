@@ -52,6 +52,11 @@ a:hover {
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 0;
+  color: #fff;
+}
+
+.woocommerce-Tabs-panel--description ul li, .woocommerce-Tabs-panel--description ul li a, .woocommerce-Tabs-panel--description div, .woocommerce-Tabs-panel--description table, .woocommerce-Tabs-panel--description td {
+  color: #fff;
 }
 
 .banner-section {
@@ -576,7 +581,7 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
   width: 100%;
 }
 .product-img {
-  background-color: #eff4f6;
+  background-color: #80aec3;
 }
 .woocommerce .woocommerce-breadcrumb {
   color: #ebc912;
@@ -586,7 +591,7 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
   color: #fff;
 }
 .woocommerce div.product .product_title {
-  color: #005d86;
+  color: #fff;
   font-size: 36px;
 }
 .summary.entry-summary .woocommerce-Price-amount {
@@ -646,11 +651,16 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active:before {
   background: #ebc912;
 }
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+  border-top: 1px solid #80aec3;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+  color: #fff;
+}
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
 .woocommerce-Tabs-panel--description p a {
-  color: #005d86;
+  color: #ebc912;
 }
-
 .woocommerce-Tabs-panel--description p {
   margin-bottom: 15px;
 }
@@ -685,6 +695,7 @@ div[data-id="47f2fc5"] h2.elementor-heading-title:after,
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
   font-size: 16px;
+  color: #fff;
 }
 
 a,
@@ -943,6 +954,9 @@ ul.payment_methods li input {
 .woocommerce-product-details__short-description {
   margin: 15px 0 20px 0;
 }
+.woocommerce-product-details__short-description p{
+  color: #fff;
+}
 input[type="email"],
 input[type="number"],
 input[type="password"],
@@ -967,7 +981,11 @@ label.ur-label,
 
 .ast-separate-container .ast-woocommerce-container {
   background-color: #005d86;
-  box-shadow: 0px 0px 15px 1px #000000;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.7);
+}
+
+.ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single{
+  background-color: #005d86;
 }
 
 @media (max-width: 991.98px) {
