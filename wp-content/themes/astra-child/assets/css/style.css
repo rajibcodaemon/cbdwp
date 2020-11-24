@@ -1041,14 +1041,25 @@ label.ur-label,
 .cart_totals table,
 .cart_totals td,
 .cart_totals tr,
-.cart_totals th {
+.cart_totals th,
+.woocommerce-account .woocommerce-MyAccount-content fieldset legend {
   color: #fff;
 }
 .payment_box.payment_method_bacs p {
   color: #515151;
 }
-.payment_method_square_credit_card p {
+.payment_method_square_credit_card p,
+p.woocommerce-Message {
   color: #515151;
+}
+
+.woocommerce-Address address,
+.woocommerce-account .woocommerce-MyAccount-content address {
+  color: #fff;
+  margin-top: 20px;
+}
+.woocommerce-Address-title.title{
+ margin-top: 20px;
 }
 
 @media (max-width: 991.98px) {
