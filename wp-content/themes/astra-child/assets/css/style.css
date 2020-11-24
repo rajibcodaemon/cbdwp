@@ -1049,7 +1049,8 @@ label.ur-label,
   color: #515151;
 }
 .payment_method_square_credit_card p,
-p.woocommerce-Message {
+p.woocommerce-Message,
+.woocommerce-Address-title.title h3, p.cart-empty.woocommerce-info {
   color: #515151;
 }
 
@@ -1058,11 +1059,14 @@ p.woocommerce-Message {
   color: #fff;
   margin-top: 20px;
 }
-.woocommerce-Address-title.title{
- margin-top: 20px;
+.woocommerce-Address-title.title {
+  margin-top: 20px;
 }
-.woocommerce-MyAccount-content h3{
+.woocommerce-MyAccount-content h3 {
   color: #fff;
+}
+.woocommerce-MyAccount-navigation-link.is-active a:hover {
+  color: #3a3a3a;
 }
 
 @media (max-width: 991.98px) {
