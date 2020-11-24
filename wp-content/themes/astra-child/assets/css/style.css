@@ -1020,24 +1020,34 @@ label.ur-label,
 .woocommerce-cart .cart-collaterals .cross-sells > h2 {
   background-color: #c7c7c7;
 }
-.woocommerce #content table.cart td, .woocommerce-page #content table.cart td {
+.woocommerce #content table.cart td,
+.woocommerce-page #content table.cart td {
   color: #fff;
 }
 
-.shop-table tbody, .shop-table td, .shop-table tr, #order_review_heading {
+.shop-table tbody,
+.shop-table td,
+.shop-table tr,
+#order_review_heading {
   color: #fff;
 }
 
-.woocommerce-billing-fields h3, .woocommerce-billing-fields label span{
+.woocommerce-billing-fields h3,
+.woocommerce-billing-fields label span {
   color: #fff;
 }
-.woocommerce-page.woocommerce-checkout form #order_review, #ship-to-different-address label span {
+.woocommerce-page.woocommerce-checkout form #order_review,
+#ship-to-different-address label span,
+.cart_totals table,
+.cart_totals td,
+.cart_totals tr,
+.cart_totals th {
   color: #fff;
 }
-.payment_box.payment_method_bacs p{
+.payment_box.payment_method_bacs p {
   color: #515151;
 }
-.payment_method_square_credit_card p{
+.payment_method_square_credit_card p {
   color: #515151;
 }
 
