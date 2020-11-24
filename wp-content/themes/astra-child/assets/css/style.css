@@ -1024,7 +1024,7 @@ label.ur-label,
   color: #fff;
 }
 
-.shop-table tbody, .shop-table td, .shop-table tr {
+.shop-table tbody, .shop-table td, .shop-table tr, #order_review_heading {
   color: #fff;
 }
 
