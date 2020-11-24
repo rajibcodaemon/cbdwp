@@ -1031,11 +1031,14 @@ label.ur-label,
 .woocommerce-billing-fields h3, .woocommerce-billing-fields label span{
   color: #fff;
 }
-.woocommerce-page.woocommerce-checkout form #order_review {
+.woocommerce-page.woocommerce-checkout form #order_review, #ship-to-different-address label span {
   color: #fff;
 }
 .payment_box.payment_method_bacs p{
-  color: #000;
+  color: #515151;
+}
+.payment_method_square_credit_card p{
+  color: #515151;
 }
 
 @media (max-width: 991.98px) {
