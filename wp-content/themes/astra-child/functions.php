@@ -22,8 +22,8 @@ function child_enqueue_styles() {
 	wp_enqueue_style( 'astra-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_ASTRA_CHILD_VERSION, 'all' );
     wp_enqueue_style('font-awesome-min-css', get_stylesheet_directory_uri() . '/assets/css/font-awesome.min.css', array());
     wp_enqueue_style('style-css', get_stylesheet_directory_uri() . '/assets/css/style.css', array());
-    /*wp_enqueue_script('jquery-slim-js', get_stylesheet_directory_uri() . '/assets/js/jquery-3.5.1.slim.min.js',
-        array('jquery'),'',true);*/
+    wp_enqueue_script('jquery-slim-js', get_stylesheet_directory_uri() . '/assets/js/jquery-3.5.1.slim.min.js',
+        array('jquery'),'',true);
     wp_enqueue_script('bootstrap-bundle-js', get_stylesheet_directory_uri() . '/assets/js/bootstrap.bundle.min.js',
         array('jquery'),'',true);
 
@@ -50,3 +50,8 @@ function remove_image_zoom_support() {
     remove_theme_support( 'wc-product-gallery-zoom' );
 }
 add_action( 'after_setup_theme', 'remove_image_zoom_support', 100 );
+
+function open_link_new_tab_woocommerce_checkout_terms_and_conditions() {
+  remove_action( 'woocommerce_checkout_terms_and_conditions', 'wc_terms_and_conditions_page_content', 30 );
+}
+add_action( 'wp', 'open_link_new_tab_woocommerce_checkout_terms_and_conditions' );
