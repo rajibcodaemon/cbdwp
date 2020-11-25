@@ -1015,11 +1015,13 @@ label.ur-label,
 }
 .woocommerce table.shop_table,
 .woocommerce-page table.shop_table,
-.woocommerce-page.woocommerce-checkout .woocommerce-order table.shop_table th {
+.woocommerce-page.woocommerce-checkout .woocommerce-order table.shop_table th,
+.woocommerce-page.woocommerce-checkout .woocommerce-customer-details address {
   border-color: #c7c7c7;
 }
 .woocommerce table.shop_table thead,
 .woocommerce-page table.shop_table thead,
+.woocommerce-MyAccount-content table.shop_table thead th,
 .woocommerce-cart .cart-collaterals .cart_totals > h2,
 .woocommerce-cart .cart-collaterals .cross-sells > h2 {
   background-color: #c7c7c7;
@@ -1030,11 +1032,20 @@ label.ur-label,
 .woocommerce-checkout-review-order-table .product-name,
 .product-total,
 .woocommerce-order,
-.woocommerce-page.woocommerce-checkout .woocommerce-order table.shop_table th {
+.woocommerce-page.woocommerce-checkout .woocommerce-order table.shop_table th,
+.woocommerce-MyAccount-content .woocommerce-order-details__title {
   color: #fff;
 }
-.woocommerce-order-details__title {
-  color: #515151 !important;
+.woocommerce-order-details {
+  margin-top: 30px;
+}
+.woocommerce-account .woocommerce-MyAccount-content mark {
+  color: #fff;
+  background-color: transparent;
+}
+.woocommerce-order .woocommerce-order-details__title,
+.woocommerce-customer-details h2 { 
+  color: #515151;
 }
 .woocommerce-order ul.order_details {
   margin-top: 30px;
@@ -1056,7 +1067,9 @@ label.ur-label,
 .cart_totals td,
 .cart_totals tr,
 .cart_totals th,
-.woocommerce-account .woocommerce-MyAccount-content fieldset legend {
+.woocommerce-account .woocommerce-MyAccount-content fieldset legend, 
+.woocommerce table.shop_table,
+.woocommerce-page table.shop_table {
   color: #fff;
 }
 .payment_box.payment_method_bacs p {
@@ -1072,7 +1085,7 @@ p.cart-empty.woocommerce-info {
 .woocommerce-Address address,
 .woocommerce-account .woocommerce-MyAccount-content address {
   color: #fff;
-  margin-top: 20px;
+  border-color: #c7c7c7;
 }
 .woocommerce-Address-title.title {
   margin-top: 20px;
