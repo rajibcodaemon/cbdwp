@@ -55,3 +55,10 @@ function open_link_new_tab_woocommerce_checkout_terms_and_conditions() {
   remove_action( 'woocommerce_checkout_terms_and_conditions', 'wc_terms_and_conditions_page_content', 30 );
 }
 add_action( 'wp', 'open_link_new_tab_woocommerce_checkout_terms_and_conditions' );
+
+// Remove Additional Information Tab WooCommerce
+add_filter( 'woocommerce_product_tabs', 'remove_info_tab', 98);
+function remove_info_tab($tabs) { 
+ unset($tabs['additional_information']);
+ return $tabs;
+}
