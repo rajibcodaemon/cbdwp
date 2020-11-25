@@ -1087,6 +1087,11 @@ p.cart-empty.woocommerce-info {
   color: #fff;
   border-color: #c7c7c7;
 }
+.woocommerce-page.woocommerce-checkout .woocommerce-order h2.woocommerce-order-details__title,
+.woocommerce-page.woocommerce-checkout .woocommerce-order h2.woocommerce-column__title,
+.woocommerce .woocommerce-MyAccount-content .woocommerce-column__title {
+  background-color: #c7c7c7;
+}
 .woocommerce-Address-title.title {
   margin-top: 20px;
 }
