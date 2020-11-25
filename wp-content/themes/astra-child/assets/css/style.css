@@ -313,7 +313,11 @@ footer.main .widget-title {
   text-transform: capitalize;
   margin-bottom: 10px;
 }
-
+footer.main .fooer-credit-card-banner {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+}
 #text-3 .widget-title {
   color: #fff;
 }
@@ -1207,6 +1211,10 @@ p.cart-empty.woocommerce-info {
   }
   footer.main .bottom-section {
     margin-top: 30px;
+  }
+  footer.main .fooer-credit-card-banner{
+    display: block;
+    margin-top: 20px;
   }
   .elementor-38
     .elementor-element.elementor-element-8871ef9

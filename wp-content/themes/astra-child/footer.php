@@ -24,6 +24,13 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-12 text-right">
+            <div class="fooer-credit-card-banner">
+              <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/Credit-Card-Banner.png" />
+            </div>
+          </div>
+        </div>
       </div>
       <div class="bottom-section">
         <div class="container">
