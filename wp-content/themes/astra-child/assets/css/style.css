@@ -1089,7 +1089,8 @@ p.cart-empty.woocommerce-info {
 }
 .woocommerce-page.woocommerce-checkout .woocommerce-order h2.woocommerce-order-details__title,
 .woocommerce-page.woocommerce-checkout .woocommerce-order h2.woocommerce-column__title,
-.woocommerce .woocommerce-MyAccount-content .woocommerce-column__title {
+.woocommerce .woocommerce-MyAccount-content .woocommerce-column__title,
+.woocommerce-account .woocommerce-Addresses .woocommerce-Address-title {
   background-color: #c7c7c7;
 }
 .woocommerce-Address-title.title {
