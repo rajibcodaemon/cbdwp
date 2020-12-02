@@ -302,7 +302,6 @@ footer.main .quick-links ul li.active a {
 
 footer.main .bottom-section {
   border-top: 1px solid #fff;
-  margin-top: 60px;
   padding: 15px;
 }
 
@@ -317,6 +316,14 @@ footer.main .fooer-credit-card-banner {
   width: 200px;
   height: auto;
   display: inline-block;
+}
+footer.main .footer-disclaimer{
+  margin-top: 60px;
+  background-color: #003b56;
+  font-size: 15px;
+  color: #ebc912;
+  text-align: center;
+  padding: 20px 0;
 }
 #text-3 .widget-title {
   color: #fff;
