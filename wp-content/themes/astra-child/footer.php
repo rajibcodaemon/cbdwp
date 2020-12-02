@@ -32,6 +32,13 @@
           </div>
         </div>
       </div>
+      <div class="footer-disclaimer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12"><p>These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease</p></div>
+          </div>
+        </div>
+      </div>
       <div class="bottom-section">
         <div class="container">
           <div class="row">
