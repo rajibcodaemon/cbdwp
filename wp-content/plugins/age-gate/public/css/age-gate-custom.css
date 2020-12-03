@@ -1,0 +1,36 @@
+.age-gate-heading{
+    display:none;
+}
+.age-gate-subheading{
+    margin: 0 0 25px; 
+}
+.age-gate-challenge, .age-gate-message{
+    margin: 0 0 25px;
+}
+.age-gate-submit--reversed,
+.age-gate-submit-no,
+.age-gate-submit-yes{
+    width: 25%;
+    margin-top: 20px;
+    background-color: #005d85;
+    border-color: #ebc912;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    display: inline-block;
+    color: #ebc912;
+    border-radius: 24px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+.age-gate-submit--reversed:hover {
+    background-color: #ebc912;
+    border-color: #ebc912;
+    color: #fff;
+}
+.age-gate-error-message{
+    color: #FF0000 !important;
+}
