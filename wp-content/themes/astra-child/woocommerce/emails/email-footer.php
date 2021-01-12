@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <h5 style="color: #97adb7; margin: 0 0 10px 0; text-align: center;">Quick Links</h5>
                     <ul style="text-align: center; margin: 0; padding: 0;">
                         <li style="display: inline-block; list-style: none;"><a href="<?php echo get_home_url();?>/privacy-policy" style="display: block; padding: 0 15px; text-decoration: none; font-weight: normal; font-size: 13px; color: #fff;">Privacy Policy</a></li>
-                        <li style="display: inline-block; list-style: none;"><a href="<?php echo get_home_url();?>/refund-policy" style="display: block; padding: 0 15px; text-decoration: none; font-weight: normal; font-size: 13px; color: #fff;">Refund Policy</a></li>
+                        <li style="display: inline-block; list-style: none;"><a href="<?php echo get_home_url();?>/return-refund-policy" style="display: block; padding: 0 15px; text-decoration: none; font-weight: normal; font-size: 13px; color: #fff;">Refund Policy</a></li>
                         <li style="display: inline-block; list-style: none;"><a href="<?php echo get_home_url();?>/terms-of-service" style="display: block; padding: 0 15px; text-decoration: none; font-weight: normal; font-size: 13px; color: #fff;">Terms &amp; Conditions</a></li>
                     </ul>
                 </nav>
