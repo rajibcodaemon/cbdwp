@@ -21,8 +21,7 @@ $text_align = is_rtl() ? 'right' : 'left';
 
 do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plain_text, $email ); ?>
 
-<table style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;color: #636363;
-	    border: 1px solid #e5e5e5;" border="1" cellspacing="0">
+<table style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;color: #636363; border: 1px solid #e5e5e5;" border="1" cellspacing="0" cellpadding="6">
 		<thead>
 			<tr>
 				<th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>;"><h2 style="margin: 0 0 5px; line-height: 100%;font-size: 15px;">Order Number</h2></th>
@@ -31,7 +30,7 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 		</thead>
 		<tbody>
 			<tr>
-				<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0; border: 1px solid #e5e5e5;">
+				<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; border: 1px solid #e5e5e5;">
 					<?php
 						if ( $sent_to_admin ) {
 							$before = '<a class="link" href="' . esc_url( $order->get_edit_order_url() ) . '">';
@@ -41,13 +40,13 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 							$after  = '';
 						}			
 					?>
-					<b><?php /* translators: %s: Order ID. */
-					echo '#'.$order->get_order_number();?></b>
+					<?php /* translators: %s: Order ID. */
+					echo '#'.$order->get_order_number();?>
 				</td>
-				<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0; border: 1px solid #e5e5e5;">
-					<b><?php /* translators: %s: Order ID. */
+				<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; border: 1px solid #e5e5e5;">
+					<?php /* translators: %s: Order ID. */
 					echo wc_format_datetime( $order->get_date_created() );
-					?></b>
+					?>
 				</td> 
 			</tr>
 		</tbody>

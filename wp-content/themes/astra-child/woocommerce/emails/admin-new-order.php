@@ -33,7 +33,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 
 <table style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;color: #636363;
-	    border: 1px solid #e5e5e5; margin-bottom: 30px" border="1" cellspacing="0">
+	    border: 1px solid #e5e5e5; margin-bottom: 30px" border="1" cellspacing="0" cellpadding="6">
 	<thead>
 		<tr>
 			<th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>;"><h2 style="margin: 0 0 5px; line-height: 100%;font-size: 15px;">Order Number</h2></th>
@@ -42,7 +42,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 	</thead>
 	<tbody>
 		<tr>
-			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0; border: 1px solid #e5e5e5;">
+			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; border: 1px solid #e5e5e5;">
 				<?php
 					if ( $sent_to_admin ) {
 						$before = '<a class="link" href="' . esc_url( $order->get_edit_order_url() ) . '">';
@@ -54,7 +54,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 				?>
 				<?php echo '#'.$order->get_order_number();?>
 			</td>
-			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0; border: 1px solid #e5e5e5;">
+			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; border: 1px solid #e5e5e5;">
 				<?php /* translators: %s: Order ID. */
 				echo wc_format_datetime( $order->get_date_created() ); ?>
 			</td> 
@@ -71,7 +71,7 @@ do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_
 ?>
 
 <table style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;color: #636363;
-	    border: 1px solid #e5e5e5; margin-bottom: 30px" border="1" cellspacing="0">
+	    border: 1px solid #e5e5e5; margin-bottom: 30px" border="1" cellspacing="0" cellpadding="6">
 	<thead>
 		<tr>
 			<th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>;"><h2 style="margin: 0 0 5px; line-height: 100%;font-size: 15px;">Telephone No</h2></th>
@@ -81,17 +81,17 @@ do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_
 	</thead>
 	<tbody>
 		<tr>
-			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0; border: 1px solid #e5e5e5;">
+			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; border: 1px solid #e5e5e5;">
 				<b>
 					<?php if ( $order->get_billing_phone() ) : ?>
 						<?php echo wc_make_phone_clickable( $order->get_billing_phone() ); ?>
 					<?php endif; ?>
 				</b>
 			</td>
-			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0; border: 1px solid #e5e5e5;">
+			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; border: 1px solid #e5e5e5;">
 				<?php echo $order->get_shipping_method();?>
 			</td>
-			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0; border: 1px solid #e5e5e5;">
+			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; border: 1px solid #e5e5e5;">
 				<?php echo $order->get_payment_method_title();?>
 			</td>
 		</tr>
