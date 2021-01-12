@@ -52,14 +52,11 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 						$after  = '';
 					}			
 				?>
-				<?php /* translators: %s: Order ID. */
-				echo '#'.$order->get_order_number();?>
+				<?php echo '#'.$order->get_order_number();?>
 			</td>
 			<td style="font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; padding:0; border: 1px solid #e5e5e5;">
 				<?php /* translators: %s: Order ID. */
-				echo wc_format_datetime( $order->get_date_created() );
-
-				//echo wp_kses_post( $before . sprintf( __( '[Order #%s]', 'woocommerce' ) . $after . ' (<time datetime="%s">%s</time>)', $order->get_order_number(), $order->get_date_created()->format( 'c' ), wc_format_datetime( $order->get_date_created() ) ) ); ?>
+				echo wc_format_datetime( $order->get_date_created() ); ?>
 			</td> 
 		</tr>
 	</tbody>

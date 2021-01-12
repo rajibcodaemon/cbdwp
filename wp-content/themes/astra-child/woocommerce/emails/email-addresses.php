@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 $text_align = is_rtl() ? 'right' : 'left';
 $address    = $order->get_formatted_billing_address();
 $shipping   = $order->get_formatted_shipping_address();
-
-?><table id="addresses" cellspacing="0" cellpadding="0" style="width: 100%; vertical-align: top; margin-bottom: 40px; padding:0;" border="0">
+?>
+<table id="addresses" cellspacing="0" cellpadding="0" style="width: 100%; vertical-align: top; margin-bottom: 40px; padding:0;" border="0">
 	<thead>
 		<tr>
 			<th class="td" scope="col" style="text-align:<?php echo esc_attr( $text_align ); ?>;"><h2 style="margin: 0 0 5px; line-height: 100%;font-size: 15px"><?php esc_html_e( 'Sold To:', 'woocommerce' ); ?></h2>
