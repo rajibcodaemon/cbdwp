@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </header>
       <div class="banner-content">
         <h1 class="mb-5">A Unique CBD<br/>Experience</h1>
-        <a href="#" class="cta">LEARN MORE</a>
+        <a href="/about-us/" class="cta">LEARN MORE</a>
       </div>
     </div>
   </section>
